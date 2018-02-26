@@ -155,7 +155,106 @@
         <!-- .end .wrap -->
       </section>
 
+      <section>
+        <div class="wrap">
+          <div class="grid vertical-align">
+            <div class="column">
+              <h4>
 
+                <strong>Transitions</strong>
+              </h4>
+              <p>Browsers calculate interpolation states</p>
+              <pre><code>
+#element {
+  transition: transform 1s;
+}
+
+#element:hover {
+  transform: translateX(100px);
+}
+              </code></pre>
+
+              <p id="p2p">
+                <style scoped>
+                  #p2p {
+                    transition: transform 1s;
+                  }
+
+                  #p2p:hover {
+                    transform: translateX(100px);
+                  }
+                </style>
+                Pose to Pose
+              </p>
+            </div>
+            <div class="column">
+              <h4>
+
+                <strong>Transitions</strong>
+              </h4>
+              <p>Browsers calculate interpolation states</p>
+              <pre><code>
+    #moveit {
+      animation: moveIt 3s;
+    }
+    
+    @keyframes moveIt {
+      33% { transform: rotate(180deg); }
+      66% { transform: scale(2); }
+      100% { color: green; }
+    }
+                  </code></pre>
+
+              <p id="moveit">
+                <style scoped>
+                  #moveit {
+                    animation: moveIt 3s;
+                  }
+
+                  @keyframes moveIt {
+                    33% {
+                      transform: rotate(360deg);
+                    }
+                    66% {
+                      transform: scale(2);
+                    }
+                    100% {
+                      color: green;
+                    }
+                  }
+                </style>
+                Almost like solid drawings
+              </p>
+            </div>
+            <div class="column">
+              <h4>
+
+                <strong>Javascript animation</strong>
+              </h4>
+              <p>greatest control and flexibility</p>
+              <pre><code>
+                  #element {
+                    transition: transform 1s;
+                  }
+                  
+                  #element:hover {
+                    transform: translateX(100px);
+                  }
+                                </code></pre>
+
+              <p>Solid drawings</p>
+
+
+            </div>
+          </div>
+          <!--end .grid -->
+        </div>
+      </section>
+
+      <p>Scripted animations are done via a JS library such as GreenSock(GSAP), MoJS, VelocityJS, just to mention a few.</p>
+      <p>However, a new Web Animations API is currently underway
+        <a href="https://caniuse.com/#search=web%20animation">caniuse</a>
+      </p>
 
 
       <section>
@@ -271,8 +370,8 @@
         </div>
         <ol>
           <li>Wes Bos - Javascript30.com</li>
-          <li></li>
-          <li></li>
+          <li>https://x-team.com/blog/web-animations-beginners-bible/</li>
+          <li>https://medium.com/@milberferreira/how-web-animation-works-e133e486d013</li>
           <li></li>
           <li></li>
 
