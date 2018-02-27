@@ -63,6 +63,8 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="theme-color" content="#333333">
 
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -222,7 +224,7 @@
             </div>
             <div class="column">
               <h4>
-                <strong>Javascript animation</strong>
+                <strong>JS animation via setInterval</strong>
               </h4>
               <p>greatest control and flexibility</p>
               <pre><code>
@@ -254,10 +256,152 @@ p.addEventListener('click', () => {
         </div>
       </section>
 
-      <p>Scripted animations are done via a JS library such as GreenSock(GSAP), MoJS, VelocityJS, just to mention a few.</p>
-      <p>However, a new Web Animations API is currently underway
-        <a href="https://caniuse.com/#search=web%20animation">caniuse</a>
-      </p>
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap aligncenter">
+          <h2>Why javascript animation?
+          </h2>
+          <br/>
+          <p>Scripted animations are usually done via a JS library such as GreenSock(GSAP), MoJS, VelocityJS, just to mention
+            a few.</p>
+          <p>However, a new Web Animations API is currently underway
+            <a href="https://caniuse.com/#search=web%20animation">(see caniuse)</a>
+          </p>
+
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="grid vertical-align">
+            <div class="column">
+              <h4 id="vjs" style="position: relative;">
+                <strong>vanilla JS via setInterval</strong>
+              </h4>
+              <p>setInterval introduced many developers to animations, but it is imprecise and can lead to stuttering animations.</p>
+              <pre><code>
+const h = document.querySelector('#vjs');
+h.addEventListener('click', () => {
+  let leftpx = 0;
+
+  const id = setInterval(() => {
+    leftpx += 12;
+    h.style.left = `${leftpx}px`;
+
+    if (leftpx > 200) { clearInterval(id); }
+  }, 16);
+});
+    </code></pre>
+
+
+              <script>
+                const h = document.querySelector('#vjs');
+                h.addEventListener('click', () => {
+                  let leftpx = 0;
+
+                  const id = setInterval(() => {
+                    leftpx += 12;
+                    h.style.left = `${leftpx}px`;
+
+                    if (leftpx > 200) { clearInterval(id); }
+                  }, 16);
+                });
+              </script>
+            </div>
+
+
+            <div class="column">
+              <h4 id="jq" style="position: relative;">
+                <strong>jQuery</strong>
+              </h4>
+              <p>introduced several other developers to animations, but often has performance issues.</p>
+              <pre><code>
+$(document).ready(function () {
+  $("#jq").click(function (event) {
+<strong>
+    $(this)
+      .css("left", "0")
+      .animate({ left: "+=200" });
+</strong>
+  });
+});            
+        </code></pre>
+
+              <br/>
+              <br/>
+              <script>
+                $(document).ready(function () {
+                  $("#jq").click(function (event) {
+
+                    $(this)
+                      .css("left", "0")
+                      .animate({ left: "+=200" });
+
+                  });
+                });    
+              </script>
+            </div>
+
+
+            <div class="column">
+              <h4 id="gsap" style="position: relative;">
+                <strong>Greensock</strong>
+              </h4>
+              <p>improve JavaScript performance and have been tested in many situations to be the best they can be. They still,
+                however, require maintaining and loading external libraries.</p>
+              <pre><code>
+const h1 = document.querySelector('#gsap');
+h1.addEventListener('click', () => {
+<strong>
+  TweenMax.to(h1, .4, { x: 200 });
+</strong>
+});
+            </code></pre>
+
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <script>
+                const h1 = document.querySelector('#gsap');
+                h1.addEventListener('click', () => {
+                  TweenMax.to(h1, .4, { x: 200 });
+                });
+              </script>
+            </div>
+          </div>
+          <!--end .grid -->
+        </div>
+
+      </section>
+
+
+      <section>
+        <div class="wrap">
+          <div class="grid vertical-align">
+            <div class="column">
+              <h4 id="waapi" style="position: relative;">
+                <strong>Web Animation API</strong>
+              </h4>
+              <p>a new way to control animations; like Greensock but native js</p>
+              <pre><code>
+      </code></pre>
+
+
+              <script>
+              </script>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+
+
+
+
 
 
       <section>
@@ -404,6 +548,7 @@ p.addEventListener('click', () => {
 
   <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
   <script defer src="././static/js/svg-icons.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 
 </body>
 
