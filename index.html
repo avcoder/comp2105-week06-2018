@@ -160,28 +160,29 @@
           <div class="grid vertical-align">
             <div class="column">
               <h4>
-
                 <strong>Transitions</strong>
               </h4>
               <p>Browsers calculate interpolation states</p>
               <pre><code>
+
 #element {
-  transition: transform 1s;
+  transition: transform 3s;
 }
 
 #element:hover {
-  transform: translateX(100px);
+  transform: translateX(200px);
 }
+
               </code></pre>
 
               <p id="p2p">
                 <style scoped>
                   #p2p {
-                    transition: transform 1s;
+                    transition: transform 3s;
                   }
 
                   #p2p:hover {
-                    transform: translateX(100px);
+                    transform: translateX(200px);
                   }
                 </style>
                 Pose to Pose
@@ -189,37 +190,30 @@
             </div>
             <div class="column">
               <h4>
-
-                <strong>Transitions</strong>
+                <strong>Keyframe Animations</strong>
               </h4>
               <p>Browsers calculate interpolation states</p>
               <pre><code>
-    #moveit {
-      animation: moveIt 3s;
-    }
-    
-    @keyframes moveIt {
-      33% { transform: rotate(180deg); }
-      66% { transform: scale(2); }
-      100% { color: green; }
-    }
+#moveit:hover {
+  animation: moveIt 3s;
+}
+
+@keyframes moveIt {
+  100% {
+    transform: translateX(200px);
+  }
+}
                   </code></pre>
 
               <p id="moveit">
                 <style scoped>
-                  #moveit {
+                  #moveit:hover {
                     animation: moveIt 3s;
                   }
 
                   @keyframes moveIt {
-                    33% {
-                      transform: rotate(360deg);
-                    }
-                    66% {
-                      transform: scale(2);
-                    }
                     100% {
-                      color: green;
+                      transform: translateX(200px);
                     }
                   }
                 </style>
@@ -228,22 +222,31 @@
             </div>
             <div class="column">
               <h4>
-
                 <strong>Javascript animation</strong>
               </h4>
               <p>greatest control and flexibility</p>
               <pre><code>
-                  #element {
-                    transition: transform 1s;
-                  }
-                  
-                  #element:hover {
-                    transform: translateX(100px);
-                  }
-                                </code></pre>
+const p = document.querySelector('#js-move');
+p.addEventListener('click', () => {
+  let leftpx = 0;
 
-              <p>Solid drawings</p>
+  setInterval(() => {
+    p.style.left = `${leftpx++}px`;
+  }, 16);
+});
+</code></pre>
+              <p id="js-move" style="position: relative;">Solid drawings</p>
 
+              <script>
+                const p = document.querySelector('#js-move');
+                p.addEventListener('mouseover', () => {
+                  let leftpx = 0;
+
+                  setInterval(() => {
+                    p.style.left = `${leftpx++}px`;
+                  }, 16);
+                });
+              </script>
 
             </div>
           </div>
