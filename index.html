@@ -377,29 +377,62 @@ h1.addEventListener('click', () => {
 
       </section>
 
-
       <section>
         <div class="wrap">
-          <div class="grid vertical-align">
-            <div class="column">
+          <div class="card-50">
+            <pre><code><h5>
+                  const player = document.querySelector('#waapi').animate(
+                    [
+                      { transform: 'none' },
+                      { transform: 'translateX(200px)' }
+                    ], 
+                  
+                    {
+                      duration: 400, //milliseconds
+                      easing: 'linear', 
+                      delay: 0, 
+                      iterations: 1,
+                      direction: 'normal', 
+                      fill: 'forwards' 
+                    });
+                  
+                  player.pause();
+                  
+                  const waapi = document.querySelector('#waapi');
+                  waapi.addEventListener('click', () => player.play());
+                  </h5></code></pre>
+
+            <div class="flex-content">
               <h4 id="waapi" style="position: relative;">
                 <strong>Web Animation API</strong>
               </h4>
               <p>a new way to control animations; like Greensock but native js</p>
-              <pre><code>
-      </code></pre>
 
-
-              <script>
-              </script>
             </div>
+            <!-- end .flex-content Credit: http://minyos.its.rmit.edu.au/aim/a_notes/anim_principles.html -->
           </div>
+          <!-- end .card-50 Credit: http://the12principles.tumblr.com/ -->
         </div>
+        <!-- .end .wrap -->
+        <script>
+          const player = document.querySelector('#waapi').animate([
+            { transform: 'none' },
+            { transform: 'translateX(200px)' }
+          ], {
+              duration: 400, //milliseconds
+              easing: 'linear', //'linear', a bezier curve, etc.
+              delay: 0, //milliseconds
+              iterations: 1, //or a number
+              direction: 'normal', //'normal', 'reverse', etc.
+              fill: 'forwards' //'backwards', 'both', 'none', 'auto'
+            });
 
+          player.pause();
+
+          const waapi = document.querySelector('#waapi');
+          waapi.addEventListener('click', () => player.play());                
+        </script>
       </section>
-
-
-
 
 
 
