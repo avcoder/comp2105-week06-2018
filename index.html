@@ -103,6 +103,7 @@
           - <div class="wrap"> = container 90% / <div class="wrap size-50"> = 45%;
         -->
 
+
       <section>
         <!-- Credit: image from unsplash.com -->
         <span class="background" style="background-image:url('././static/images/splash.jpg'); filter: opacity(.3);"></span>
@@ -132,6 +133,114 @@
         <!--.wrap = container (width: 90%) -->
         <div class="wrap size-50 aligncenter">
           <h2>
+            <strong>10,000 foot view:
+              <br/>Ways to Animate in the Browser</strong>
+          </h2>
+          <br />
+          <div class="bg-white shadow">
+            <ul class="flexblock steps">
+              <li>
+                <h2>DOM animation</h2>
+                <p>We are here</p>
+              </li>
+              <li>
+                <h2>SVG animation</h2>
+              </li>
+              <li>
+                <h2>2D Canvas animation</h2>
+              </li>
+              <li>
+                <h2>3D animation and WebGL</h2>
+              </li>
+            </ul>
+          </div>
+          <!-- .end .bg-white shadow -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+
+        <div class="wrap">
+          <div class="content-left">
+            <h3>
+              How Firefox renders/reflows the DOM
+            </h3>
+
+            <p>
+              <a href="http://www.openbookproject.net/tutorials/getdown/css/images/lesson4/HTMLDOMTree.png">DOM tree</a>
+              <br/>
+              <a href="https://varvy.com/performance/images/cssom-defined.png">CSSOM tree</a>
+            </p>
+
+            <ul class="flexblock specs">
+              <li>Parses your HTML to make DOM; Parses your CSS to make CSSOM</li>
+
+              <li>Layout = DOM + CSSOM
+                <br> Render tree contains all info about any element's width, height etc.
+              </li>
+              <li>Paint</li>
+            </ul>
+          </div>
+          <!-- end .content-left -->
+          <div class="content-left">
+            <!-- <div class="embed"> = Responsive -->
+            <div class="embed">
+              <div data-youtube data-youtube-id="ZTnIxIA5KGw" data-autoplay data-no-controls></div>
+            </div>
+            <!-- end .embed -->
+          </div>
+          <!-- end .content-left -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap size-50 aligncenter">
+          <h2>
+            <strong>2 Approaches to DOM Animation</strong>
+          </h2>
+          <br />
+          <div class="bg-white shadow">
+            <ul class="flexblock">
+              <li>
+                <h2>CSS</h2>
+                <p>Transitions</p>
+                <p>Keyframe animation</p>
+              </li>
+              <li>
+                <h2>JS animation</h2>
+                <p>vanilla JS
+                  <br/>&nbsp;&nbsp;&nbsp;(setInterval, classes, element.style._______)</p>
+                <p>jQuery</p>
+                <p>an animation library such as Greensock</p>
+                <p>vanilla JS (via new Web Animation API)</p>
+              </li>
+            </ul>
+          </div>
+          <ul class="flexblock steps">
+            <li>Use CSS animations for simpler "one-shot" transitions, like toggling UI element states (may use JS to control
+              states)
+            </li>
+            <li>Use JavaScript animations when you want to have advanced effects like bouncing, stop, pause, rewind, or slow
+              down
+            </li>
+            <li>If you choose to animate with JavaScript, use the Web Animations API or a modern framework that you're comfortable
+              with
+            </li>
+          </ul>
+
+          <!-- .end .bg-white shadow -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap size-50 aligncenter">
+          <h2>
             <strong>To Do Today:</strong>
           </h2>
           <br />
@@ -139,14 +248,14 @@
             <ul class="flexblock reasons">
               <li>
                 <h2>JS</h2>
-                <p>Build simple animations using native JavaScript.</p>
+                <p>Build simple animations using native JavaScript</p>
               </li>
               <li>
                 <h2>JS Frameworks</h2>
-                <p>Build simple animations using a variety of popular JavaScript frameworks.</p>
+                <p>Build simple animations using popular JavaScript frameworks</p>
               </li>
               <li>
-                <h2>CSS vs. JS?</h2>
+                <h2>CSS vs. JS</h2>
                 <p>Compare and contrast the use of CSS versus JavaScript for building motion graphics
                 </p>
               </li>
@@ -156,6 +265,7 @@
         </div>
         <!-- .end .wrap -->
       </section>
+
 
       <section>
         <div class="wrap">
@@ -269,6 +379,28 @@ p.addEventListener('click', () => {
             <a href="https://caniuse.com/#search=web%20animation">(see caniuse)</a>
           </p>
 
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <blockquote class="text-quote">
+            <p>Not all of the 12 principles apply equally to work on the web or to modern tools. Some matter more than others
+              for animating interfaces. A solid understanding of Timing, Follow-through, Appeal, Anticipation, and Squash
+              and Stretch will be useful in web design, for example. While concepts like Staging and Solid Drawing, however,
+              are mostly irrelevant.
+            </p>
+            <p></p>
+            <p>
+              <cite>
+                <img class="avatar-56" src="https://pbs.twimg.com/profile_images/669650293747900416/GApkPcFY_bigger.jpg" alt="Avatar">Val Head.
+                <br/>
+                <a href="https://www.fastcodesign.com/3055811/what-disneys-classic-animation-principles-can-teach-us-about-great-web-design">What Disney's classic animation principles can teach us about great web design</a>
+              </cite>
+            </p>
+          </blockquote>
         </div>
         <!-- .end .wrap -->
       </section>
@@ -552,6 +684,11 @@ h1.addEventListener('click', () => {
           <li>Wes Bos - Javascript30.com</li>
           <li>https://x-team.com/blog/web-animations-beginners-bible/</li>
           <li>https://medium.com/@milberferreira/how-web-animation-works-e133e486d013</li>
+          <li>https://developers.google.com/web/fundamentals/design-and-ux/animations/css-vs-javascript</li>
+          <li>https://css-tricks.com/restart-css-animation/</li>
+          <li>https://github.com/wesbos/JavaScript30/tree/master/05%20-%20Flex%20Panel%20Gallery</li>
+          <li>https://www.youtube.com/watch?v=SmE4OwHztCc</li>
+          <li></li>
           <li></li>
           <li></li>
 
