@@ -128,6 +128,35 @@
         <!-- .end .wrap -->
       </section>
 
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap size-50 aligncenter">
+          <h2>
+            <strong>To Do Today:</strong>
+          </h2>
+          <br />
+          <div class="bg-white shadow">
+            <ul class="flexblock reasons">
+              <li>
+                <h2>JS</h2>
+                <p>Build simple animations using native JavaScript</p>
+              </li>
+              <li>
+                <h2>JS Frameworks</h2>
+                <p>Build simple animations using popular JavaScript frameworks</p>
+              </li>
+              <li>
+                <h2>CSS vs. JS</h2>
+                <p>Compare and contrast the use of CSS versus JavaScript for building motion graphics
+                </p>
+              </li>
+            </ul>
+          </div>
+          <!-- .end .bg-white shadow -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
 
       <section>
         <!--.wrap = container (width: 90%) -->
@@ -174,12 +203,12 @@
             </p>
 
             <ul class="flexblock specs">
-              <li>Parses your HTML to make DOM; Parses your CSS to make CSSOM</li>
+              <li>Parse phase - Parses your HTML to make DOM; Parses your CSS to make CSSOM</li>
 
-              <li>Layout = DOM + CSSOM
-                <br> Render tree contains all info about any element's width, height etc.
+              <li>Layout phase = DOM + CSSOM
+                <br> Render tree contains all info about any element's width, height etc. &rarr; see video &rarr;
               </li>
-              <li>Paint</li>
+              <li>Paint phase</li>
             </ul>
           </div>
           <!-- end .content-left -->
@@ -200,23 +229,26 @@
         <!--.wrap = container (width: 90%) -->
         <div class="wrap size-50 aligncenter">
           <h2>
-            <strong>2 Approaches to DOM Animation</strong>
+            <strong>3 Approaches to DOM Animation</strong>
           </h2>
           <br />
           <div class="bg-white shadow">
             <ul class="flexblock">
               <li>
-                <h2>CSS</h2>
-                <p>Transitions</p>
-                <p>Keyframe animation</p>
+                <h2>CSS Transitions</h2>
+                <p>- interpolation states is calculated automatically by the browser</p>
               </li>
               <li>
-                <h2>JS animation</h2>
-                <p>vanilla JS
+                <h2>Keyframe animation</h2>
+                <p>- allows for a greater control between states where each interpolation state (aka keyframe) can loop</p>
+              </li>
+              <li>
+                <h2>Javascript</h2>
+                <p>native JS
                   <br/>&nbsp;&nbsp;&nbsp;(setInterval, classes, element.style._______)</p>
                 <p>jQuery</p>
                 <p>an animation library such as Greensock</p>
-                <p>vanilla JS (via new Web Animation API)</p>
+                <p>native JS (via new Web Animation API)</p>
               </li>
             </ul>
           </div>
@@ -232,35 +264,6 @@
             </li>
           </ul>
 
-          <!-- .end .bg-white shadow -->
-        </div>
-        <!-- .end .wrap -->
-      </section>
-
-      <section>
-        <!--.wrap = container (width: 90%) -->
-        <div class="wrap size-50 aligncenter">
-          <h2>
-            <strong>To Do Today:</strong>
-          </h2>
-          <br />
-          <div class="bg-white shadow">
-            <ul class="flexblock reasons">
-              <li>
-                <h2>JS</h2>
-                <p>Build simple animations using native JavaScript</p>
-              </li>
-              <li>
-                <h2>JS Frameworks</h2>
-                <p>Build simple animations using popular JavaScript frameworks</p>
-              </li>
-              <li>
-                <h2>CSS vs. JS</h2>
-                <p>Compare and contrast the use of CSS versus JavaScript for building motion graphics
-                </p>
-              </li>
-            </ul>
-          </div>
           <!-- .end .bg-white shadow -->
         </div>
         <!-- .end .wrap -->
@@ -304,7 +307,7 @@
               <h4>
                 <strong>Keyframe Animations</strong>
               </h4>
-              <p>Browsers calculate interpolation states</p>
+              <p>greater control of interpolation between states</p>
               <pre><code>
 #moveit:hover {
   animation: moveIt 3s;
@@ -339,7 +342,7 @@
               <p>greatest control and flexibility</p>
               <pre><code>
 const p = document.querySelector('#js-move');
-p.addEventListener('click', () => {
+p.addEventListener('mouseover', () => {
   let leftpx = 0;
 
   setInterval(() => {
@@ -373,11 +376,8 @@ p.addEventListener('click', () => {
           <h2>Why javascript animation?
           </h2>
           <br/>
-          <p>Scripted animations are usually done via a JS library such as GreenSock(GSAP), MoJS, VelocityJS, just to mention
+          <p class="text-intro">Scripted animations are usually done via a JS library such as GreenSock(GSAP), MoJS, VelocityJS, just to mention
             a few.</p>
-          <p>However, a new Web Animations API is currently underway
-            <a href="https://caniuse.com/#search=web%20animation">(see caniuse)</a>
-          </p>
 
         </div>
         <!-- .end .wrap -->
@@ -387,17 +387,15 @@ p.addEventListener('click', () => {
         <!--.wrap = container (width: 90%) -->
         <div class="wrap">
           <blockquote class="text-quote">
-            <p>Not all of the 12 principles apply equally to work on the web or to modern tools. Some matter more than others
-              for animating interfaces. A solid understanding of Timing, Follow-through, Appeal, Anticipation, and Squash
-              and Stretch will be useful in web design, for example. While concepts like Staging and Solid Drawing, however,
-              are mostly irrelevant.
+            <p>Most libraries are using native animation technologies under the hood anyway, so the more that you know about
+              these, the more you’ll be able to negotiate what is happening when it becomes abstracted
             </p>
             <p></p>
             <p>
               <cite>
-                <img class="avatar-56" src="https://pbs.twimg.com/profile_images/669650293747900416/GApkPcFY_bigger.jpg" alt="Avatar">Val Head.
+                <img class="avatar-56" src="https://pbs.twimg.com/profile_images/967911694457389056/lNnUddRP_bigger.jpg" alt="Avatar">Sarah Drasner
                 <br/>
-                <a href="https://www.fastcodesign.com/3055811/what-disneys-classic-animation-principles-can-teach-us-about-great-web-design">What Disney's classic animation principles can teach us about great web design</a>
+                <a href="https://css-tricks.com/comparison-animation-technologies/">A Comparison of Animation Technologies</a>
               </cite>
             </p>
           </blockquote>
@@ -410,10 +408,10 @@ p.addEventListener('click', () => {
           <div class="grid vertical-align">
             <div class="column">
               <h4 id="vjs" style="position: relative;">
-                <strong>vanilla JS via setInterval</strong>
+                <strong>native JS via setInterval</strong>
               </h4>
               <p>setInterval introduced many developers to animations, but it is imprecise and can lead to stuttering animations.</p>
-              <pre><code>
+              <pre><code><strong>
 const h = document.querySelector('#vjs');
 h.addEventListener('click', () => {
   let leftpx = 0;
@@ -425,8 +423,11 @@ h.addEventListener('click', () => {
     if (leftpx > 200) { clearInterval(id); }
   }, 16);
 });
-    </code></pre>
-
+</strong></code></pre>
+              <p>However, see new Web Animations API -
+                <a href="https://caniuse.com/#search=web%20animation">(see caniuse)</a>
+              </p>
+              <br/>
 
               <script>
                 const h = document.querySelector('#vjs');
@@ -448,7 +449,7 @@ h.addEventListener('click', () => {
               <h4 id="jq" style="position: relative;">
                 <strong>jQuery</strong>
               </h4>
-              <p>introduced several other developers to animations, but often has performance issues.</p>
+              <p>Isn’t solely an animation library, but it has animation methods and a ton of people use it</p>
               <pre><code>
 $(document).ready(function () {
   $("#jq").click(function (event) {
@@ -461,6 +462,12 @@ $(document).ready(function () {
 });            
         </code></pre>
 
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
               <br/>
               <br/>
               <script>
@@ -496,6 +503,12 @@ h1.addEventListener('click', () => {
               <br/>
               <br/>
               <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
               <script>
                 const h1 = document.querySelector('#gsap');
                 h1.addEventListener('click', () => {
@@ -507,6 +520,69 @@ h1.addEventListener('click', () => {
           <!--end .grid -->
         </div>
 
+      </section>
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap aligncenter">
+          <h2>Web Animation API
+          </h2>
+          <br/>
+          <p class="text-intro">The new Web Animations API is native JavaScript that allows you to create more complex sequential animations without
+            loading any external scripts</p>
+
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <blockquote class="text-quote">
+            <p>This native [Web Animation] API is part of a movement to align the performance of CSS animations and the flexibility
+              of sequencing in JavaScript under one roof.
+            </p>
+            <p></p>
+            <p>
+              <cite>
+                <img class="avatar-56" src="https://pbs.twimg.com/profile_images/967911694457389056/lNnUddRP_bigger.jpg" alt="Avatar">Sarah Drasner
+                <br/>
+                <a href="https://css-tricks.com/comparison-animation-technologies/">A Comparison of Animation Technologies</a>
+              </cite>
+            </p>
+          </blockquote>
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <div class="wrap">
+          <h1>2 Ways to use Web Animation API</h1>
+          <div class="card-50">
+            <pre><code><h5>
+  // via function .animate()
+  var element = document.querySelector('.anime-js');
+  var effect = [...];
+  var options = {...};
+  
+  var move = element.animate(effect, options);
+              </h5></code></pre>
+
+            <pre><code><h5>
+  // via constructors new Animation()
+  var element = document.querySelector('.anime-js');
+  var effect = [...];
+  var options = {...};
+  
+  var keyframes = new KeyframeEffect(element, effect, options);
+  var move = new Animation(keyframes, element.ownerDocument.timeline);
+  move.play();
+              </h5></code></pre>
+
+          </div>
+          <!-- end .card-50 Credit: http://the12principles.tumblr.com/ -->
+        </div>
+        <!-- .end .wrap -->
       </section>
 
       <section>
@@ -569,6 +645,7 @@ h1.addEventListener('click', () => {
 
 
 
+
       <section>
         <!--.wrap = container (width: 90%) -->
         <div class="wrap">
@@ -586,6 +663,61 @@ h1.addEventListener('click', () => {
             <div class="column">
               <h2>
                 Challenge - use JS to add class
+              </h2>
+
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
+            <div class="column">
+              <p data-height="500" data-theme-id="0" data-slug-hash="MQrRxX" data-default-tab="css,result" data-user="electerious" data-embed-version="2"
+                data-pen-title="Mouse movement button with border-radius" class="codepen">See the Pen
+                <a href="https://codepen.io/electerious/pen/MQrRxX/">Mouse movement button with border-radius</a> by Tobias Reich (
+                <a href="https://codepen.io/electerious">@electerious</a>) on
+                <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h2>
+                Challenge - use CSS variables and JS to make gradient hover button
+              </h2>
+
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
+            <div class="column">
+              <p data-height="500" data-theme-id="0" data-slug-hash="bLzJbb" data-default-tab="js,result" data-user="avcoder" data-embed-version="2"
+                data-pen-title="web animations API" class="codepen">See the Pen
+                <a href="https://codepen.io/avcoder/pen/bLzJbb/">web animations API</a> by A.V. (
+                <a href="https://codepen.io/avcoder">@avcoder</a>) on
+                <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h2>
+                Web Animation API Demo
               </h2>
 
             </div>
@@ -642,9 +774,215 @@ h1.addEventListener('click', () => {
         </div>
       </section>
 
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap size-50 aligncenter">
+          <h2>
+            <strong>To Do Today:</strong>
+          </h2>
+          <br />
+          <div class="bg-white shadow">
+            <ul class="flexblock reasons">
+              <li>
+                <h2>JS</h2>
+                <p>Build simple animations using native JavaScript</p>
+              </li>
+              <li>
+                <h2>JS Frameworks</h2>
+                <p>Build simple animations using popular JavaScript frameworks</p>
+              </li>
+              <li style="background: #aafaa4">
+                <h2>CSS vs. JS</h2>
+                <p>Compare and contrast the use of CSS versus JavaScript for building motion graphics
+                </p>
+              </li>
+            </ul>
+          </div>
+          <!-- .end .bg-white shadow -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
 
 
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <h2 class="aligncenter">CSS Transitions and Animations</h2>
+        <br/>
+        <div class="grid vertical-align">
+          <div class="bg-white shadow column">
+            <h2>Pros</h2>
+            <ul class="flexblock activity">
+              <li>
+                <p class="text-intro">You don’t need an external library</p>
+              </li>
+              <li>
+                <p class="text-intro">performance is great</p>
+              </li>
+              <li>
+                <p class="text-intro">You can listen for onAnimationEnd, transitionend, or other hooks with native JS</p>
+              </li>
+              <li>
+                <p class="text-intro">easy to use for responsive development because you can use media queries</p>
+              </li>
+            </ul>
 
+          </div>
+          <!-- .end .bg-white shadow -->
+          <div class="bg-white shadow column">
+            <h2>Cons</h2>
+            <ul class="flexblock activity">
+              <li>
+                <p class="text-intro">With only two handles to shape the bezier, you can’t produce complex physics effects for realistic motion</p>
+              </li>
+              <li>
+                <p class="text-intro">Sequencing in CSS becomes complex; If you go beyond chaining three animations in a row, you should use JS</p>
+              </li>
+              <li>
+                <p class="text-intro">CSS + SVG animation has some strange quirkiness in behaviour</p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <h2 class="aligncenter">jQuery</h2>
+        <br/>
+        <div class="grid vertical-align">
+          <div class="bg-white shadow column">
+            <h2>Pros</h2>
+            <ul class="flexblock activity">
+              <li>
+                <p class="text-intro">
+                  A lot of sites already have it loaded, so it’s usually readily available
+                </p>
+              </li>
+              <li>
+                <p class="text-intro">syntax is really easy to read and write</p>
+              </li>
+              <li>
+                <p class="text-intro">They recently moved over to requestAnimationFrame, so in versions 3.0.0 and greater, the performance will
+                  be better than before</p>
+              </li>
+
+            </ul>
+
+          </div>
+          <!-- .end .bg-white shadow -->
+          <div class="bg-white shadow column">
+            <h2>Cons</h2>
+            <ul class="flexblock activity">
+              <li>
+                <p class="text-intro">Versions earlier than 3.0.0 performance is not great and not recommended</p>
+              </li>
+              <li>
+                <p class="text-intro">
+                  <strong>Animations aren’t supported on SVG in any version</strong>
+                </p>
+              </li>
+              <li>
+                <p class="text-intro">jQuery is limited to the DOM, unlike tools like GSAP which work on anything</p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <h2 class="aligncenter">GreenSock (GSAP)</h2>
+        <br/>
+        <div class="grid vertical-align">
+          <div class="bg-white shadow column">
+            <h2>Pros</h2>
+            <ul class="flexblock activity">
+              <li>
+                <p class="text-intro">
+                  It’s extraordinarily performant for something that’s not native
+                </p>
+              </li>
+
+              <li>
+                <p class="text-intro">sequencing tools (like timeline) are as easy to read/write with one line of code</p>
+              </li>
+              <li>
+                <p class="text-intro">They have a ton of other plugins if you want to do fancy things like animate text, morph SVGs, or draw paths.</p>
+              </li>
+              <li>
+                <p class="text-intro">It solves SVG cross-browser woes.</p>
+              </li>
+
+            </ul>
+
+          </div>
+          <!-- .end .bg-white shadow -->
+          <div class="bg-white shadow column">
+            <h2>Cons</h2>
+            <ul class="flexblock activity">
+              <li>
+                <p class="text-intro">You have to pay for licensing if you're re-selling your product to multiple users (apps and paid-access sites)</p>
+              </li>
+              <li>
+                <p class="text-intro">As with any external library, you have to watch which versions you are using in production. When new versions
+                  come out, upgrading will involve some testing (like any library)</p>
+              </li>
+              <li>
+                <p class="text-intro">You'll also need to consider the size of the library</p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <h2 class="aligncenter">Web Animations API</h2>
+        <br/>
+        <div class="grid vertical-align">
+          <div class="bg-white shadow column">
+            <h2>Pros</h2>
+            <ul class="flexblock activity">
+              <li>
+                <p class="text-intro">
+                  is native JavaScript that allows you to create more complex sequential animations without loading any external scripts.
+                </p>
+              </li>
+
+              <li>
+                <p class="text-intro">Sequencing is easy and super legible</p>
+              </li>
+              <li>
+                <p class="text-intro">Performance seems to be on track to being very good</p>
+              </li>
+            </ul>
+
+          </div>
+          <!-- .end .bg-white shadow -->
+          <div class="bg-white shadow column">
+            <h2>Cons</h2>
+            <ul class="flexblock activity">
+              <li>
+                <p class="text-intro">Support is not great right now. It’s also still changing a bit so while the spec is moving... be cautious
+                  about running it in a production environment</p>
+              </li>
+              <li>
+                <p class="text-intro">There are still a lot of things about the timeline in GSAP (which we'll be covering in a moment) that are
+                  more powerful.</p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <!-- .end .wrap -->
+      </section>
 
       <section>
         <!--.wrap = container (width: 90%) -->
@@ -688,10 +1026,14 @@ h1.addEventListener('click', () => {
           <li>https://css-tricks.com/restart-css-animation/</li>
           <li>https://github.com/wesbos/JavaScript30/tree/master/05%20-%20Flex%20Panel%20Gallery</li>
           <li>https://www.youtube.com/watch?v=SmE4OwHztCc</li>
+          <li>https://blog.prototypr.io/stunning-hover-effects-with-css-variables-f855e7b95330</li>
+          <li>https://pawelgrzybek.com/intro-to-the-web-animations-api/</li>
+          <li>https://css-tricks.com/comparison-animation-technologies/</li>
           <li></li>
           <li></li>
           <li></li>
-
+          <li></li>
+          <li></li>
         </ol>
 
         <!-- .end .wrap -->
