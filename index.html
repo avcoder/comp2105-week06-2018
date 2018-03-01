@@ -244,10 +244,10 @@
               </li>
               <li>
                 <h2>Javascript</h2>
-                <p>old native JS (setInterval, classes, el.style.____)</p>
-                <p>jQuery</p>
-                <p>an animation library such as Greensock</p>
-                <p>new native JS - Web Animation API</p>
+                <p style="border-bottom: 1px solid #ddd;">native JS - setInterval, classes, el.style.____</p>
+                <p style="border-bottom: 1px solid #ddd;">jQuery</p>
+                <p style="border-bottom: 1px solid #ddd;">an animation library such as Greensock</p>
+                <p style="border-bottom: 1px solid #ddd;">native JS - new Web Animation API</p>
               </li>
             </ul>
           </div>
@@ -370,6 +370,124 @@ p.addEventListener('mouseover', () => {
         </div>
       </section>
 
+      <section>
+        <div class="wrap">
+          <div class="grid vertical-align">
+            <div class="column">
+              <h4 id="vjs" style="position: relative;">
+                <strong>native JS via setInterval</strong>
+              </h4>
+              <p>setInterval introduced many developers to animations, but it is imprecise and can lead to stuttering animations.</p>
+              <pre><code><strong>
+  const h = document.querySelector('#vjs');
+  h.addEventListener('click', () => {
+    let leftpx = 0;
+  
+    const id = setInterval(() => {
+      leftpx += 12;
+      h.style.left = `${leftpx}px`;
+  
+      if (leftpx > 200) { clearInterval(id); }
+    }, 16);
+  });
+  </strong></code></pre>
+              <p>However, see new Web Animations API -
+                <a href="https://caniuse.com/#search=web%20animation">(see caniuse)</a>
+              </p>
+              <br/>
+
+              <script>
+                const h = document.querySelector('#vjs');
+                h.addEventListener('click', () => {
+                  let leftpx = 0;
+
+                  const id = setInterval(() => {
+                    leftpx += 12;
+                    h.style.left = `${leftpx}px`;
+
+                    if (leftpx > 200) { clearInterval(id); }
+                  }, 16);
+                });
+              </script>
+            </div>
+
+
+            <div class="column">
+              <h4 id="jq" style="position: relative;">
+                <strong>jQuery</strong>
+              </h4>
+              <p>Isn’t solely an animation library, but it has animation methods and a ton of people use it</p>
+              <pre><code>
+  $(document).ready(function () {
+    $("#jq").click(function (event) {
+  <strong>
+      $(this)
+        .css("left", "0")
+        .animate({ left: "+=200" });
+  </strong>
+    });
+  });            
+          </code></pre>
+
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <script>
+                $(document).ready(function () {
+                  $("#jq").click(function (event) {
+
+                    $(this)
+                      .css("left", "0")
+                      .animate({ left: "+=200" });
+
+                  });
+                });    
+              </script>
+            </div>
+
+
+            <div class="column">
+              <h4 id="gsap" style="position: relative;">
+                <strong>Greensock</strong>
+              </h4>
+              <p>improve JavaScript performance and have been tested in many situations to be the best they can be. They still,
+                however, require maintaining and loading external libraries.</p>
+              <pre><code>
+  const h1 = document.querySelector('#gsap');
+  h1.addEventListener('click', () => {
+  <strong>
+    TweenMax.to(h1, .4, { x: 200 });
+  </strong>
+  });
+              </code></pre>
+
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <script>
+                const h1 = document.querySelector('#gsap');
+                h1.addEventListener('click', () => {
+                  TweenMax.to(h1, .4, { x: 200 });
+                });
+              </script>
+            </div>
+          </div>
+          <!--end .grid -->
+        </div>
+
+      </section>
 
       <section>
         <!--.wrap = container (width: 90%) -->
@@ -393,7 +511,7 @@ p.addEventListener('mouseover', () => {
         <h2 class="aligncenter">CSS Transitions and Animations</h2>
         <br/>
         <div class="grid vertical-align">
-          <div class="bg-white shadow column">
+          <div class="bg-blue shadow column">
             <h2>Pros</h2>
             <ul class="flexblock activity">
               <li>
@@ -412,7 +530,7 @@ p.addEventListener('mouseover', () => {
 
           </div>
           <!-- .end .bg-white shadow -->
-          <div class="bg-white shadow column">
+          <div class="bg-purple shadow column">
             <h2>Cons</h2>
             <ul class="flexblock activity">
               <li>
@@ -431,11 +549,105 @@ p.addEventListener('mouseover', () => {
         <!-- .end .wrap -->
       </section>
 
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <h2 class="aligncenter">jQuery</h2>
+        <br/>
+        <div class="grid vertical-align">
+          <div class="bg-white shadow column">
+            <h2>Pros</h2>
+            <ul class="flexblock activity">
+              <li>
+                <p class="text-intro">
+                  A lot of sites already have it loaded, so it’s usually readily available
+                </p>
+              </li>
+              <li>
+                <p class="text-intro">syntax is really easy to read and write</p>
+              </li>
+              <li>
+                <p class="text-intro">They recently moved over to requestAnimationFrame, so in versions 3.0.0 and greater, the performance will
+                  be better than before</p>
+              </li>
+
+            </ul>
+
+          </div>
+          <!-- .end .bg-white shadow -->
+          <div class="bg-white shadow column">
+            <h2>Cons</h2>
+            <ul class="flexblock activity">
+              <li>
+                <p class="text-intro">Versions earlier than 3.0.0 performance is not great and not recommended</p>
+              </li>
+              <li>
+                <p class="text-intro">
+                  <strong>Animations aren’t supported on SVG in any version</strong>
+                </p>
+              </li>
+              <li>
+                <p class="text-intro">jQuery is limited to the DOM, unlike tools like GSAP which work on anything</p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <h2 class="aligncenter">GreenSock (GSAP)</h2>
+        <br/>
+        <div class="grid vertical-align">
+          <div class="bg-white shadow column">
+            <h2>Pros</h2>
+            <ul class="flexblock activity">
+              <li>
+                <p class="text-intro">
+                  It’s extraordinarily performant for something that’s not native
+                </p>
+              </li>
+
+              <li>
+                <p class="text-intro">sequencing tools (like timeline) are as easy to read/write with one line of code</p>
+              </li>
+              <li>
+                <p class="text-intro">They have a ton of other plugins if you want to do fancy things like animate text, morph SVGs, or draw paths.</p>
+              </li>
+              <li>
+                <p class="text-intro">It solves SVG cross-browser woes.</p>
+              </li>
+
+            </ul>
+
+          </div>
+          <!-- .end .bg-white shadow -->
+          <div class="bg-white shadow column">
+            <h2>Cons</h2>
+            <ul class="flexblock activity">
+              <li>
+                <p class="text-intro">You have to pay for licensing if you're re-selling your product to multiple users (apps and paid-access sites)</p>
+              </li>
+              <li>
+                <p class="text-intro">As with any external library, you have to watch which versions you are using in production. When new versions
+                  come out, upgrading will involve some testing (like any library)</p>
+              </li>
+              <li>
+                <p class="text-intro">You'll also need to consider the size of the library</p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
       <section>
         <!--.wrap = container (width: 90%) -->
         <div class="wrap size-80 aligncenter">
           <h2>
-            <strong>Some JS Animation Libraries</strong>
+            Some JS Animation Libraries
           </h2>
           <br />
           <div class="bg-white shadow">
@@ -503,124 +715,6 @@ p.addEventListener('mouseover', () => {
         <!-- .end .wrap -->
       </section>
 
-      <section>
-        <div class="wrap">
-          <div class="grid vertical-align">
-            <div class="column">
-              <h4 id="vjs" style="position: relative;">
-                <strong>native JS via setInterval</strong>
-              </h4>
-              <p>setInterval introduced many developers to animations, but it is imprecise and can lead to stuttering animations.</p>
-              <pre><code><strong>
-const h = document.querySelector('#vjs');
-h.addEventListener('click', () => {
-  let leftpx = 0;
-
-  const id = setInterval(() => {
-    leftpx += 12;
-    h.style.left = `${leftpx}px`;
-
-    if (leftpx > 200) { clearInterval(id); }
-  }, 16);
-});
-</strong></code></pre>
-              <p>However, see new Web Animations API -
-                <a href="https://caniuse.com/#search=web%20animation">(see caniuse)</a>
-              </p>
-              <br/>
-
-              <script>
-                const h = document.querySelector('#vjs');
-                h.addEventListener('click', () => {
-                  let leftpx = 0;
-
-                  const id = setInterval(() => {
-                    leftpx += 12;
-                    h.style.left = `${leftpx}px`;
-
-                    if (leftpx > 200) { clearInterval(id); }
-                  }, 16);
-                });
-              </script>
-            </div>
-
-
-            <div class="column">
-              <h4 id="jq" style="position: relative;">
-                <strong>jQuery</strong>
-              </h4>
-              <p>Isn’t solely an animation library, but it has animation methods and a ton of people use it</p>
-              <pre><code>
-$(document).ready(function () {
-  $("#jq").click(function (event) {
-<strong>
-    $(this)
-      .css("left", "0")
-      .animate({ left: "+=200" });
-</strong>
-  });
-});            
-        </code></pre>
-
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <script>
-                $(document).ready(function () {
-                  $("#jq").click(function (event) {
-
-                    $(this)
-                      .css("left", "0")
-                      .animate({ left: "+=200" });
-
-                  });
-                });    
-              </script>
-            </div>
-
-
-            <div class="column">
-              <h4 id="gsap" style="position: relative;">
-                <strong>Greensock</strong>
-              </h4>
-              <p>improve JavaScript performance and have been tested in many situations to be the best they can be. They still,
-                however, require maintaining and loading external libraries.</p>
-              <pre><code>
-const h1 = document.querySelector('#gsap');
-h1.addEventListener('click', () => {
-<strong>
-  TweenMax.to(h1, .4, { x: 200 });
-</strong>
-});
-            </code></pre>
-
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <script>
-                const h1 = document.querySelector('#gsap');
-                h1.addEventListener('click', () => {
-                  TweenMax.to(h1, .4, { x: 200 });
-                });
-              </script>
-            </div>
-          </div>
-          <!--end .grid -->
-        </div>
-
-      </section>
 
       <section>
         <!--.wrap = container (width: 90%) -->
@@ -902,101 +996,6 @@ h1.addEventListener('click', () => {
             <!-- .end .column -->
           </div>
           <!-- .end .grid -->
-        </div>
-        <!-- .end .wrap -->
-      </section>
-
-
-      <section class="bg-apple">
-        <!--.wrap = container (width: 90%) -->
-        <h2 class="aligncenter">jQuery</h2>
-        <br/>
-        <div class="grid vertical-align">
-          <div class="bg-white shadow column">
-            <h2>Pros</h2>
-            <ul class="flexblock activity">
-              <li>
-                <p class="text-intro">
-                  A lot of sites already have it loaded, so it’s usually readily available
-                </p>
-              </li>
-              <li>
-                <p class="text-intro">syntax is really easy to read and write</p>
-              </li>
-              <li>
-                <p class="text-intro">They recently moved over to requestAnimationFrame, so in versions 3.0.0 and greater, the performance will
-                  be better than before</p>
-              </li>
-
-            </ul>
-
-          </div>
-          <!-- .end .bg-white shadow -->
-          <div class="bg-white shadow column">
-            <h2>Cons</h2>
-            <ul class="flexblock activity">
-              <li>
-                <p class="text-intro">Versions earlier than 3.0.0 performance is not great and not recommended</p>
-              </li>
-              <li>
-                <p class="text-intro">
-                  <strong>Animations aren’t supported on SVG in any version</strong>
-                </p>
-              </li>
-              <li>
-                <p class="text-intro">jQuery is limited to the DOM, unlike tools like GSAP which work on anything</p>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-        <!-- .end .wrap -->
-      </section>
-
-      <section class="bg-apple">
-        <!--.wrap = container (width: 90%) -->
-        <h2 class="aligncenter">GreenSock (GSAP)</h2>
-        <br/>
-        <div class="grid vertical-align">
-          <div class="bg-white shadow column">
-            <h2>Pros</h2>
-            <ul class="flexblock activity">
-              <li>
-                <p class="text-intro">
-                  It’s extraordinarily performant for something that’s not native
-                </p>
-              </li>
-
-              <li>
-                <p class="text-intro">sequencing tools (like timeline) are as easy to read/write with one line of code</p>
-              </li>
-              <li>
-                <p class="text-intro">They have a ton of other plugins if you want to do fancy things like animate text, morph SVGs, or draw paths.</p>
-              </li>
-              <li>
-                <p class="text-intro">It solves SVG cross-browser woes.</p>
-              </li>
-
-            </ul>
-
-          </div>
-          <!-- .end .bg-white shadow -->
-          <div class="bg-white shadow column">
-            <h2>Cons</h2>
-            <ul class="flexblock activity">
-              <li>
-                <p class="text-intro">You have to pay for licensing if you're re-selling your product to multiple users (apps and paid-access sites)</p>
-              </li>
-              <li>
-                <p class="text-intro">As with any external library, you have to watch which versions you are using in production. When new versions
-                  come out, upgrading will involve some testing (like any library)</p>
-              </li>
-              <li>
-                <p class="text-intro">You'll also need to consider the size of the library</p>
-              </li>
-            </ul>
-          </div>
-
         </div>
         <!-- .end .wrap -->
       </section>
