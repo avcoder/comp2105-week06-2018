@@ -157,48 +157,6 @@
         <!-- .end .wrap -->
       </section>
 
-      <section class="bg-apple">
-        <!--.wrap = container (width: 90%) -->
-        <h2 class="aligncenter">CSS Transitions and Animations</h2>
-        <br/>
-        <div class="grid vertical-align">
-          <div class="bg-white shadow column">
-            <h2>Pros</h2>
-            <ul class="flexblock activity">
-              <li>
-                <p class="text-intro">You don’t need an external library</p>
-              </li>
-              <li>
-                <p class="text-intro">performance is great</p>
-              </li>
-              <li>
-                <p class="text-intro">You can listen for onAnimationEnd, transitionend, or other hooks with native JS</p>
-              </li>
-              <li>
-                <p class="text-intro">easy to use for responsive development because you can use media queries</p>
-              </li>
-            </ul>
-
-          </div>
-          <!-- .end .bg-white shadow -->
-          <div class="bg-white shadow column">
-            <h2>Cons</h2>
-            <ul class="flexblock activity">
-              <li>
-                <p class="text-intro">With only two handles to shape the bezier, you can’t produce complex physics effects for realistic motion</p>
-              </li>
-              <li>
-                <p class="text-intro">Sequencing in CSS becomes complex; If you go beyond chaining three animations in a row, you should use JS</p>
-              </li>
-              <li>
-                <p class="text-intro">CSS + SVG animation has some strange quirkiness in behaviour</p>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-        <!-- .end .wrap -->
-      </section>
 
       <section>
         <!--.wrap = container (width: 90%) -->
@@ -317,7 +275,7 @@
           <div class="grid vertical-align">
             <div class="column">
               <h4>
-                <strong>Transitions</strong>
+                <strong>CSS Transitions</strong>
               </h4>
               <p>Browsers calculate interpolation states</p>
               <pre><code>
@@ -347,7 +305,7 @@
             </div>
             <div class="column">
               <h4>
-                <strong>Keyframe Animations</strong>
+                <strong>CSS Keyframe Animations</strong>
               </h4>
               <p>greater control of interpolation between states</p>
               <pre><code>
@@ -384,6 +342,7 @@
               <p>greatest control and flexibility</p>
               <pre><code>
 const p = document.querySelector('#js-move');
+
 p.addEventListener('mouseover', () => {
   let leftpx = 0;
 
@@ -418,8 +377,55 @@ p.addEventListener('mouseover', () => {
           <h2>Why javascript animation?
           </h2>
           <br/>
-          <p class="text-intro">Scripted animations are usually done via a JS library such as GreenSock(GSAP), MoJS, VelocityJS, just to mention
-            a few.</p>
+          <p class="text-intro">
+            <strong>It provides the greatest control and flexibiliy</strong>
+          </p>
+          <p class="text-intro">Scripted animations can be done in native JS but most use a JS library such as GreenSock(GSAP), jQuery, just to
+            mention a few.
+          </p>
+
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <h2 class="aligncenter">CSS Transitions and Animations</h2>
+        <br/>
+        <div class="grid vertical-align">
+          <div class="bg-white shadow column">
+            <h2>Pros</h2>
+            <ul class="flexblock activity">
+              <li>
+                <p class="text-intro">You don’t need an external library</p>
+              </li>
+              <li>
+                <p class="text-intro">performance is great</p>
+              </li>
+              <li>
+                <p class="text-intro">You can listen for onAnimationEnd, transitionend, or other hooks with native JS</p>
+              </li>
+              <li>
+                <p class="text-intro">easy to use for responsive development because you can use media queries</p>
+              </li>
+            </ul>
+
+          </div>
+          <!-- .end .bg-white shadow -->
+          <div class="bg-white shadow column">
+            <h2>Cons</h2>
+            <ul class="flexblock activity">
+              <li>
+                <p class="text-intro">With only two handles to shape the bezier, you can’t produce complex physics effects for realistic motion</p>
+              </li>
+              <li>
+                <p class="text-intro">Sequencing in CSS becomes complex; If you go beyond chaining three animations in a row, you should use JS</p>
+              </li>
+              <li>
+                <p class="text-intro">CSS + SVG animation has some strange quirkiness in behaviour</p>
+              </li>
+            </ul>
+          </div>
 
         </div>
         <!-- .end .wrap -->
