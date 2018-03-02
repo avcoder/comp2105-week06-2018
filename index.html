@@ -337,7 +337,7 @@
             </div>
             <div class="column">
               <h4>
-                <strong>old native JS via setInterval</strong>
+                <strong>native JS</strong>
               </h4>
               <p>greatest control and flexibility</p>
               <pre><code>
@@ -370,12 +370,57 @@ p.addEventListener('mouseover', () => {
         </div>
       </section>
 
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <h2 class="aligncenter">CSS Transitions and Animations</h2>
+        <br/>
+        <div class="grid vertical-align">
+          <div class="bg-blue shadow column">
+            <h2>Pros</h2>
+            <ul class="flexblock activity">
+              <li>
+                <p class="text-intro">You don’t need an external library</p>
+              </li>
+              <li>
+                <p class="text-intro">performance is great</p>
+              </li>
+              <li>
+                <p class="text-intro">You can listen for onAnimationEnd, transitionend, or other hooks with native JS</p>
+              </li>
+              <li>
+                <p class="text-intro">easy to use for responsive development because you can use media queries</p>
+              </li>
+            </ul>
+
+          </div>
+          <!-- .end .bg-white shadow -->
+          <div class="bg-purple shadow column">
+            <h2>Cons</h2>
+            <ul class="flexblock activity">
+              <li>
+                <p class="text-intro">With only two handles to shape the bezier, you can’t produce complex physics effects for realistic motion</p>
+              </li>
+              <li>
+                <p class="text-intro">Sequencing in CSS becomes complex; If you go beyond chaining three animations in a row, you should use JS</p>
+              </li>
+              <li>
+                <p class="text-intro">CSS + SVG animation has some strange quirkiness in behaviour</p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+
+
       <section>
         <div class="wrap">
           <div class="grid vertical-align">
             <div class="column">
               <h4 id="vjs" style="position: relative;">
-                <strong>native JS via setInterval</strong>
+                <strong>native JS</strong>
               </h4>
               <p>setInterval introduced many developers to animations, but it is imprecise and can lead to stuttering animations.</p>
               <pre><code><strong>
@@ -455,8 +500,7 @@ p.addEventListener('mouseover', () => {
               <h4 id="gsap" style="position: relative;">
                 <strong>Greensock</strong>
               </h4>
-              <p>improve JavaScript performance and have been tested in many situations to be the best they can be. They still,
-                however, require maintaining and loading external libraries.</p>
+              <p>the best, most mature, cross-browser, performant animation library</p>
               <pre><code>
   const h1 = document.querySelector('#gsap');
   h1.addEventListener('click', () => {
@@ -489,6 +533,8 @@ p.addEventListener('mouseover', () => {
 
       </section>
 
+
+
       <section>
         <!--.wrap = container (width: 90%) -->
         <div class="wrap aligncenter">
@@ -506,143 +552,6 @@ p.addEventListener('mouseover', () => {
         <!-- .end .wrap -->
       </section>
 
-      <section class="bg-apple">
-        <!--.wrap = container (width: 90%) -->
-        <h2 class="aligncenter">CSS Transitions and Animations</h2>
-        <br/>
-        <div class="grid vertical-align">
-          <div class="bg-blue shadow column">
-            <h2>Pros</h2>
-            <ul class="flexblock activity">
-              <li>
-                <p class="text-intro">You don’t need an external library</p>
-              </li>
-              <li>
-                <p class="text-intro">performance is great</p>
-              </li>
-              <li>
-                <p class="text-intro">You can listen for onAnimationEnd, transitionend, or other hooks with native JS</p>
-              </li>
-              <li>
-                <p class="text-intro">easy to use for responsive development because you can use media queries</p>
-              </li>
-            </ul>
-
-          </div>
-          <!-- .end .bg-white shadow -->
-          <div class="bg-purple shadow column">
-            <h2>Cons</h2>
-            <ul class="flexblock activity">
-              <li>
-                <p class="text-intro">With only two handles to shape the bezier, you can’t produce complex physics effects for realistic motion</p>
-              </li>
-              <li>
-                <p class="text-intro">Sequencing in CSS becomes complex; If you go beyond chaining three animations in a row, you should use JS</p>
-              </li>
-              <li>
-                <p class="text-intro">CSS + SVG animation has some strange quirkiness in behaviour</p>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-        <!-- .end .wrap -->
-      </section>
-
-      <section class="bg-apple">
-        <!--.wrap = container (width: 90%) -->
-        <h2 class="aligncenter">jQuery</h2>
-        <br/>
-        <div class="grid vertical-align">
-          <div class="bg-white shadow column">
-            <h2>Pros</h2>
-            <ul class="flexblock activity">
-              <li>
-                <p class="text-intro">
-                  A lot of sites already have it loaded, so it’s usually readily available
-                </p>
-              </li>
-              <li>
-                <p class="text-intro">syntax is really easy to read and write</p>
-              </li>
-              <li>
-                <p class="text-intro">They recently moved over to requestAnimationFrame, so in versions 3.0.0 and greater, the performance will
-                  be better than before</p>
-              </li>
-
-            </ul>
-
-          </div>
-          <!-- .end .bg-white shadow -->
-          <div class="bg-white shadow column">
-            <h2>Cons</h2>
-            <ul class="flexblock activity">
-              <li>
-                <p class="text-intro">Versions earlier than 3.0.0 performance is not great and not recommended</p>
-              </li>
-              <li>
-                <p class="text-intro">
-                  <strong>Animations aren’t supported on SVG in any version</strong>
-                </p>
-              </li>
-              <li>
-                <p class="text-intro">jQuery is limited to the DOM, unlike tools like GSAP which work on anything</p>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-        <!-- .end .wrap -->
-      </section>
-
-      <section class="bg-apple">
-        <!--.wrap = container (width: 90%) -->
-        <h2 class="aligncenter">GreenSock (GSAP)</h2>
-        <br/>
-        <div class="grid vertical-align">
-          <div class="bg-white shadow column">
-            <h2>Pros</h2>
-            <ul class="flexblock activity">
-              <li>
-                <p class="text-intro">
-                  It’s extraordinarily performant for something that’s not native
-                </p>
-              </li>
-
-              <li>
-                <p class="text-intro">sequencing tools (like timeline) are as easy to read/write with one line of code</p>
-              </li>
-              <li>
-                <p class="text-intro">They have a ton of other plugins if you want to do fancy things like animate text, morph SVGs, or draw paths.</p>
-              </li>
-              <li>
-                <p class="text-intro">It solves SVG cross-browser woes.</p>
-              </li>
-
-            </ul>
-
-          </div>
-          <!-- .end .bg-white shadow -->
-          <div class="bg-white shadow column">
-            <h2>Cons</h2>
-            <ul class="flexblock activity">
-              <li>
-                <p class="text-intro">You have to pay for licensing if you're re-selling your product to multiple users (apps and paid-access sites)</p>
-              </li>
-              <li>
-                <p class="text-intro">As with any external library, you have to watch which versions you are using in production. When new versions
-                  come out, upgrading will involve some testing (like any library)</p>
-              </li>
-              <li>
-                <p class="text-intro">You'll also need to consider the size of the library</p>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-        <!-- .end .wrap -->
-      </section>
-
       <section>
         <!--.wrap = container (width: 90%) -->
         <div class="wrap size-80 aligncenter">
@@ -653,7 +562,25 @@ p.addEventListener('mouseover', () => {
           <div class="bg-white shadow">
             <ul class="flexblock gallery">
               <li>
-                <img src="./static/images/greensock.png" alt="greensock">
+                <style scoped>
+                  #gs {
+                    animation: .3s 7s 2 alternate shake;
+                  }
+
+                  @keyframes shake {
+                    0%,
+                    100% {
+                      transform: rotate(0);
+                    }
+                    80% {
+                      transform: rotate(1deg);
+                    }
+                    90% {
+                      transform: rotate(-1deg);
+                    }
+                  }
+                </style>
+                <img id="gs" src="./static/images/greensock.png" alt="greensock">
               </li>
               <li>
                 <img src="./static/images/ani.png" alt="ani js">
@@ -697,6 +624,102 @@ p.addEventListener('mouseover', () => {
 
       <section class="bg-apple">
         <!--.wrap = container (width: 90%) -->
+        <h2 class="aligncenter">jQuery</h2>
+        <br/>
+        <div class="grid vertical-align">
+          <div class="bg-blue shadow column">
+            <h2>Pros</h2>
+            <ul class="flexblock activity">
+              <li>
+                <p class="text-intro">
+                  A lot of sites already have it loaded, so it’s usually readily available
+                </p>
+              </li>
+              <li>
+                <p class="text-intro">syntax is really easy to read and write</p>
+              </li>
+              <li>
+                <p class="text-intro">They recently moved over to requestAnimationFrame, so in versions 3.0.0 and greater, the performance will
+                  be better than before</p>
+              </li>
+
+            </ul>
+
+          </div>
+          <!-- .end .bg-white shadow -->
+          <div class="bg-purple shadow column">
+            <h2>Cons</h2>
+            <ul class="flexblock activity">
+              <li>
+                <p class="text-intro">Versions earlier than 3.0.0 performance is not great and not recommended</p>
+              </li>
+              <li>
+                <p class="text-intro">
+                  <strong>Animations aren’t supported on SVG in any version</strong>
+                </p>
+              </li>
+              <li>
+                <p class="text-intro">jQuery is limited to the DOM, unlike tools like GSAP which work on anything</p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <h2 class="aligncenter">GreenSock (GSAP)</h2>
+        <br/>
+        <div class="grid vertical-align">
+          <div class="bg-blue shadow column">
+            <h2>Pros</h2>
+            <ul class="flexblock activity">
+              <li>
+                <p class="text-intro">
+                  It’s extraordinarily performant for something that’s not native
+                </p>
+              </li>
+
+              <li>
+                <p class="text-intro">sequencing tools (like timeline) are as easy to read/write with one line of code</p>
+              </li>
+              <li>
+                <p class="text-intro">They have a ton of other plugins if you want to do fancy things like animate text, morph SVGs, or draw paths.</p>
+              </li>
+              <li>
+                <p class="text-intro">It solves SVG cross-browser woes.</p>
+              </li>
+
+            </ul>
+
+          </div>
+          <!-- .end .bg-white shadow -->
+          <div class="bg-purple shadow column">
+            <h2>Cons</h2>
+            <ul class="flexblock activity">
+              <li>
+                <p class="text-intro">You have to pay for licensing if you're re-selling your product to multiple users (apps and paid-access sites)</p>
+              </li>
+              <li>
+                <p class="text-intro">As with any external library, you have to watch which versions you are using in production. When new versions
+                  come out, upgrading will involve some testing (like any library)</p>
+              </li>
+              <li>
+                <p class="text-intro">You'll also need to consider the size of the library</p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+
+
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
         <div class="wrap">
           <blockquote class="text-quote">
             <p>Most libraries are using native animation technologies under the hood anyway, so the more that you know about
@@ -727,6 +750,54 @@ p.addEventListener('mouseover', () => {
 
         </div>
         <!-- .end .wrap -->
+      </section>
+
+      <section class="bg-apple aligncenter">
+        <div class="wrap zoomIn">
+          <h1>
+            Do Discussion 2
+          </h1>
+          <p>
+            <a href="https://gc.blackboard.com">Login to Blackboard</a>
+          </p>
+          <p class="text-intro size-80 wrap">Think about the different approaches to implementing motion graphics in the browser that we've just learned about.</p>
+          <p class="text-intro size-80 wrap"> Create a new thread, and in 2-3 sentences, explain what approach you feel is the most effective and why. Perhaps
+            you feel that a certain approach is best for a certain application? Comment on at least one of your peer's threads.</p>
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+
+      <section class="bg-secondary">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap size-50 frame">
+          <h2 class="text-serif aligncenter">
+            Discussion 2 + Break
+            <br/> (15 mins) + (15 mins)
+            <br/>= 30 mins
+          </h2>
+          <p class="aligncenter">
+            <a href="http://avillaruz.computerstudi.es/comp2105/index.html">Start timer</a>
+          </p>
+          <p class="text-symbols">* * *</p>
+          <h4>More CSS vs. JS articles</h4>
+
+          <ul>
+            <li>
+              <a href="https://hackernoon.com/in-simple-terms-css-vs-javascript-abc9d709399d" style="text-decoration:underline;">Animations and more: CSS vs JavaScript</a>
+            </li>
+            <li>
+              <a href="https://www.heartinternet.uk/blog/should-you-use-css-or-javascript-for-web-animations/" style="text-decoration:underline;">Should you use CSS or Javascript for web animations?</a>
+            </li>
+            <li>
+              <a href="https://zellwk.com/blog/css-or-js-for-animations/" style="text-decoration:underline;">CSS or JS for animations?</a>
+            </li>
+            <li>
+              <a href="https://css-tricks.com/myth-busting-css-animations-vs-javascript/" style="text-decoration:underline;">Myth Busting: CSs Animations vs. Javascript</a>
+            </li>
+
+          </ul>
+        </div>
       </section>
 
       <section class="bg-apple">
@@ -857,6 +928,34 @@ p.addEventListener('mouseover', () => {
                 Attempt 5 - use JS to add class
               </h2>
               <p>Try adding an event listener for 'transitionend' then do something</p>
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
+            <div class="column">
+              <p data-height="500" data-theme-id="0" data-slug-hash="LQgaLg" data-default-tab="js,result" data-user="avcoder" data-embed-version="2"
+                data-pen-title="online exercise 6" class="codepen">See the Pen
+                <a href="https://codepen.io/avcoder/pen/LQgaLg/">online exercise 6</a> by A.V. (
+                <a href="https://codepen.io/avcoder">@avcoder</a>) on
+                <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h2>
+                native JS
+              </h2>
+              <p>Move the switch using 4 different ways: nativeJS, jQuery, Greensock, and Web Animation API</p>
             </div>
             <!-- .end .column -->
           </div>
@@ -1042,53 +1141,7 @@ p.addEventListener('mouseover', () => {
         <!-- .end .wrap -->
       </section>
 
-      <section class="bg-apple aligncenter">
-        <div class="wrap zoomIn">
-          <h1>
-            Do Discussion 2
-          </h1>
-          <p>
-            <a href="https://gc.blackboard.com">Login to Blackboard</a>
-          </p>
-          <p class="text-intro size-80 wrap">Think about the different approaches to implementing motion graphics in the browser that we've just learned about.</p>
-          <p class="text-intro size-80 wrap"> Create a new thread, and in 2-3 sentences, explain what approach you feel is the most effective and why. Perhaps
-            you feel that a certain approach is best for a certain application? Comment on at least one of your peer's threads.</p>
-        </div>
-        <!-- .end .wrap -->
-      </section>
 
-
-      <section class="bg-secondary">
-        <!--.wrap = container (width: 90%) -->
-        <div class="wrap size-50 frame">
-          <h2 class="text-serif aligncenter">
-            Discussion 2 + Break
-            <br/> (15 mins) + (15 mins)
-            <br/>= 30 mins
-          </h2>
-          <p class="aligncenter">
-            <a href="http://avillaruz.computerstudi.es/comp2105/index.html">Start timer</a>
-          </p>
-          <p class="text-symbols">* * *</p>
-          <h4>More CSS vs. JS articles</h4>
-
-          <ul>
-            <li>
-              <a href="https://hackernoon.com/in-simple-terms-css-vs-javascript-abc9d709399d" style="text-decoration:underline;">Animations and more: CSS vs JavaScript</a>
-            </li>
-            <li>
-              <a href="https://www.heartinternet.uk/blog/should-you-use-css-or-javascript-for-web-animations/" style="text-decoration:underline;">Should you use CSS or Javascript for web animations?</a>
-            </li>
-            <li>
-              <a href="https://zellwk.com/blog/css-or-js-for-animations/" style="text-decoration:underline;">CSS or JS for animations?</a>
-            </li>
-            <li>
-              <a href="https://css-tricks.com/myth-busting-css-animations-vs-javascript/" style="text-decoration:underline;">Myth Busting: CSs Animations vs. Javascript</a>
-            </li>
-
-          </ul>
-        </div>
-      </section>
 
       <section>
         <!--.wrap = container (width: 90%) -->
@@ -1136,9 +1189,7 @@ p.addEventListener('mouseover', () => {
               <a href="https://www.webdesignerdepot.com/2018/01/10-best-free-animation-libraries-for-the-web/" style="text-decoration:underline;">https://www.webdesignerdepot.com/2018/01/10-best-free-animation-libraries-for-the-web/</a>
             </li>
             <li>
-              <a href="http://www.pixijs.com/" style="text-decoration:underline;">Pixi js</a> &nbsp;
-              <a href="http://thednp.github.io/kute.js/" style="text-decoration:underline;">Kute js</a> &nbsp;
-              <a href="https://popmotion.io/" style="text-decoration:underline;">Popmotion</a>
+              <a href="https://learnui.design/?utm_campaign=css-tricks" style="text-decoration:underline;">Learn UI - free course until Mar. 14</a> &nbsp;
             </li>
           </ul>
         </div>
@@ -1165,10 +1216,10 @@ p.addEventListener('mouseover', () => {
           <li>https://pawelgrzybek.com/intro-to-the-web-animations-api/</li>
           <li>https://css-tricks.com/comparison-animation-technologies/</li>
           <li>https://css-tricks.com/myth-busting-css-animations-vs-javascript/</li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>https://bitsofco.de/css-animations-vs-the-web-animations-api/</li>
+          <li>https://lisilinhart.info/posts/waapi-introduction</li>
+          <li>http://danielcwilson.com/blog/2015/07/animations-intro/</li>
+          <li>https://css-tricks.com/controlling-css-animations-transitions-javascript/</li>
         </ol>
 
         <!-- .end .wrap -->
