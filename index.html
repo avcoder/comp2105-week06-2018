@@ -244,6 +244,8 @@
               </li>
               <li>
                 <h2>Javascript</h2>
+                <p>- allows for greatest control and flexibility</p>
+                <br/>
                 <p style="border-bottom: 1px solid #ddd;">native JS - setInterval, classes, el.style.____</p>
                 <p style="border-bottom: 1px solid #ddd;">jQuery</p>
                 <p style="border-bottom: 1px solid #ddd;">an animation library such as Greensock</p>
@@ -251,123 +253,11 @@
               </li>
             </ul>
           </div>
-          <ul class="flexblock steps">
-            <li>Use CSS animations for simpler "one-shot" transitions, like toggling UI element states (may use JS to control
-              states)
-            </li>
-            <li>Use JavaScript animations when you want to have advanced effects like bouncing, stop, pause, rewind, or slow
-              down
-            </li>
-            <li>If you choose to animate with JavaScript, use the Web Animations API or a modern framework that you're comfortable
-              with
-            </li>
-          </ul>
+
 
           <!-- .end .bg-white shadow -->
         </div>
         <!-- .end .wrap -->
-      </section>
-
-
-      <section>
-        <div class="wrap">
-          <h2 class="aligncenter">Examples of the 3 Approaches</h2>
-          <div class="grid vertical-align">
-            <div class="column">
-              <h4>
-                <strong>CSS Transitions</strong>
-              </h4>
-              <p>Browsers calculate interpolation states</p>
-              <pre><code>
-
-#element {
-  transition: transform 3s;
-}
-
-#element:hover {
-  transform: translateX(200px);
-}
-
-              </code></pre>
-
-              <p id="p2p">
-                <style scoped>
-                  #p2p {
-                    transition: transform 3s;
-                  }
-
-                  #p2p:hover {
-                    transform: translateX(200px);
-                  }
-                </style>
-                Pose to Pose
-              </p>
-            </div>
-            <div class="column">
-              <h4>
-                <strong>CSS Keyframe Animations</strong>
-              </h4>
-              <p>greater control of interpolation between states</p>
-              <pre><code>
-#moveit:hover {
-  animation: moveIt 3s;
-}
-
-@keyframes moveIt {
-  100% {
-    transform: translateX(200px);
-  }
-}
-                  </code></pre>
-
-              <p id="moveit">
-                <style scoped>
-                  #moveit:hover {
-                    animation: moveIt 3s;
-                  }
-
-                  @keyframes moveIt {
-                    100% {
-                      transform: translateX(200px);
-                    }
-                  }
-                </style>
-                More frequent pose to poses within the same time frame.
-              </p>
-            </div>
-            <div class="column">
-              <h4>
-                <strong>native JS</strong>
-              </h4>
-              <p>greatest control and flexibility</p>
-              <pre><code>
-const p = document.querySelector('#js-move');
-
-p.addEventListener('mouseover', () => {
-  let leftpx = 0;
-
-  setInterval(() => {
-    p.style.left = `${leftpx++}px`;
-  }, 16);
-});
-</code></pre>
-              <p id="js-move" style="position: relative;">Solid drawings</p>
-
-              <script>
-                const p = document.querySelector('#js-move');
-                p.addEventListener('mouseover', () => {
-                  let leftpx = 0;
-
-                  setInterval(() => {
-                    p.style.left = `${leftpx++}px`;
-                  }, 16);
-                });
-              </script>
-
-            </div>
-          </div>
-          <!--end .grid -->
-        </div>
       </section>
 
       <section class="bg-apple">
@@ -412,6 +302,105 @@ p.addEventListener('mouseover', () => {
         </div>
         <!-- .end .wrap -->
       </section>
+
+
+      <section>
+        <div class="wrap">
+          <div class="grid vertical-align">
+            <div class="column">
+              <h4>
+                <strong>CSS Transitions</strong>
+              </h4>
+              <pre><code>
+
+#element {
+  transition: transform 3s;
+}
+
+#element:hover {
+  transform: translateX(200px);
+}
+
+              </code></pre>
+
+              <p id="p2p">
+                <style scoped>
+                  #p2p {
+                    transition: transform 3s;
+                  }
+
+                  #p2p:hover {
+                    transform: translateX(200px);
+                  }
+                </style>
+                Pose to Pose
+              </p>
+            </div>
+            <div class="column">
+              <h4>
+                <strong>CSS Keyframe Animations</strong>
+              </h4>
+              <pre><code>
+#moveit:hover {
+  animation: moveIt 3s;
+}
+
+@keyframes moveIt {
+  100% {
+    transform: translateX(200px);
+  }
+}
+                  </code></pre>
+
+              <p id="moveit">
+                <style scoped>
+                  #moveit:hover {
+                    animation: moveIt 3s;
+                  }
+
+                  @keyframes moveIt {
+                    100% {
+                      transform: translateX(200px);
+                    }
+                  }
+                </style>
+                More frequent pose to poses within the same time frame.
+              </p>
+            </div>
+            <div class="column">
+              <h4>
+                <strong>native JS</strong>
+              </h4>
+              <pre><code>
+const p = document.querySelector('#js-move');
+
+p.addEventListener('mouseover', () => {
+  let leftpx = 0;
+
+  setInterval(() => {
+    p.style.left = `${leftpx++}px`;
+  }, 16);
+});
+</code></pre>
+              <p id="js-move" style="position: relative;">Solid drawings</p>
+
+              <script>
+                const p = document.querySelector('#js-move');
+                p.addEventListener('mouseover', () => {
+                  let leftpx = 0;
+
+                  setInterval(() => {
+                    p.style.left = `${leftpx++}px`;
+                  }, 16);
+                });
+              </script>
+
+            </div>
+          </div>
+          <!--end .grid -->
+        </div>
+      </section>
+
 
 
 
@@ -547,7 +536,17 @@ p.addEventListener('mouseover', () => {
           <p class="text-intro">Scripted animations can be done in native JS but most use a JS library such as GreenSock(GSAP), jQuery, just to
             mention a few.
           </p>
-
+          <ul class="flexblock steps">
+            <li>Use CSS animations for simpler "one-shot" transitions, like toggling UI element states (may use JS to control
+              states)
+            </li>
+            <li>Use JavaScript animations when you want to have advanced effects like bouncing, stop, pause, rewind, or slow
+              down
+            </li>
+            <li>If you choose to animate with JavaScript, use the Web Animations API or a modern framework that you're comfortable
+              with
+            </li>
+          </ul>
         </div>
         <!-- .end .wrap -->
       </section>
@@ -738,16 +737,89 @@ p.addEventListener('mouseover', () => {
         <!-- .end .wrap -->
       </section>
 
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
+            <div class="column">
+              <p data-height="500" data-theme-id="0" data-slug-hash="LQgaLg" data-default-tab="css,result" data-user="avcoder" data-embed-version="2"
+                data-pen-title="online exercise 6 - css only" data-preview="true" class="codepen">See the Pen
+                <a href="https://codepen.io/avcoder/pen/LQgaLg/">online exercise 6 - css only</a> by A.V. (
+                <a href="https://codepen.io/avcoder">@avcoder</a>) on
+                <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h2>
+                CSS only
+              </h2>
+              <p>Move the switch using 4 different ways:
+                <strong>CSS only</strong>, nativeJS, jQuery, Greensock</p>
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
 
       <section>
         <!--.wrap = container (width: 90%) -->
-        <div class="wrap aligncenter">
-          <h2>Web Animation API
-          </h2>
-          <br/>
-          <p class="text-intro">The new Web Animations API is native JavaScript that allows you to create more complex sequential animations without
-            loading any external scripts</p>
+        <div class="wrap">
+          <div class="grid vertical-align">
 
+            <div class="column">
+              <p data-height="500" data-theme-id="0" data-slug-hash="oEyaeQ" data-default-tab="css,result" data-user="avcoder" data-embed-version="2"
+                data-pen-title="attempt 1" data-preview="true" class="codepen">See the Pen
+                <a href="https://codepen.io/avcoder/pen/oEyaeQ/">attempt 1</a> by A.V. (
+                <a href="https://codepen.io/avcoder">@avcoder</a>) on
+                <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h2>
+                CSS only
+              </h2>
+              <p>My Attempt #1 at Project 1</p>
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
+            <div class="column">
+              <p data-height="500" data-theme-id="0" data-slug-hash="yvwXqL" data-default-tab="js,result" data-user="avcoder" data-embed-version="2"
+                data-pen-title="online exercise 6 - native js (setInterval way)" data-preview="true" class="codepen">See the Pen
+                <a href="https://codepen.io/avcoder/pen/yvwXqL/">online exercise 6 - native js (setInterval way)</a> by A.V. (
+                <a href="https://codepen.io/avcoder">@avcoder</a>) on
+                <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h2>
+                native JS only
+              </h2>
+              <p>
+                <p>Move the switch using 4 different ways: CSS only,
+                  <strong>nativeJS</strong>, jQuery, Greensock</p>
+              </p>
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
         </div>
         <!-- .end .wrap -->
       </section>
@@ -799,6 +871,20 @@ p.addEventListener('mouseover', () => {
           </ul>
         </div>
       </section>
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap aligncenter">
+          <h2>Web Animation API
+          </h2>
+          <br/>
+          <p class="text-intro">The new Web Animations API is native JavaScript that allows you to create more complex sequential animations without
+            loading any external scripts</p>
+
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
 
       <section class="bg-apple">
         <!--.wrap = container (width: 90%) -->
@@ -937,32 +1023,7 @@ p.addEventListener('mouseover', () => {
       </section>
 
 
-      <section>
-        <!--.wrap = container (width: 90%) -->
-        <div class="wrap">
-          <div class="grid vertical-align">
 
-            <div class="column">
-              <p data-height="500" data-theme-id="0" data-slug-hash="LQgaLg" data-default-tab="js,result" data-user="avcoder" data-embed-version="2"
-                data-pen-title="online exercise 6" class="codepen">See the Pen
-                <a href="https://codepen.io/avcoder/pen/LQgaLg/">online exercise 6</a> by A.V. (
-                <a href="https://codepen.io/avcoder">@avcoder</a>) on
-                <a href="https://codepen.io">CodePen</a>.</p>
-              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-            </div>
-            <!-- .end .column -->
-            <div class="column">
-              <h2>
-                native JS
-              </h2>
-              <p>Move the switch using 4 different ways: nativeJS, jQuery, Greensock, and Web Animation API</p>
-            </div>
-            <!-- .end .column -->
-          </div>
-          <!-- .end .grid -->
-        </div>
-        <!-- .end .wrap -->
-      </section>
 
       <section>
         <!--.wrap = container (width: 90%) -->
@@ -1104,7 +1165,7 @@ p.addEventListener('mouseover', () => {
         <h2 class="aligncenter">Web Animations API</h2>
         <br/>
         <div class="grid vertical-align">
-          <div class="bg-white shadow column">
+          <div class="bg-blue shadow column">
             <h2>Pros</h2>
             <ul class="flexblock activity">
               <li>
@@ -1123,7 +1184,7 @@ p.addEventListener('mouseover', () => {
 
           </div>
           <!-- .end .bg-white shadow -->
-          <div class="bg-white shadow column">
+          <div class="bg-purple shadow column">
             <h2>Cons</h2>
             <ul class="flexblock activity">
               <li>
