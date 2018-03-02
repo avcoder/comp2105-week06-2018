@@ -928,9 +928,6 @@ h.addEventListener('click', () => {
                 </p>
                 <p>Move the switch using 4 different ways: CSS only,
                   <strong>nativeJS</strong>, jQuery, Greensock</p>
-                <pre><code><strong>
-
-                </strong></code></pre>
             </div>
             <!-- .end .column -->
           </div>
@@ -1006,12 +1003,26 @@ h.addEventListener('click', () => {
             <ul class="flexblock activity">
               <li>
                 <h2>transitionend</h2>
+                <p class="text-intro">listen for the event transitionend then alert a message</p>
               </li>
               <li>
                 <h2>Restarting animation via void element.offsetWidth</h2>
+                <pre><code>
+// Comment out the following and see what happens:
+box.classList.toggle('move');  
+bg.classList.toggle('bgon');
+
+void box.offsetWidth; 
+                </code></pre>
+                <p>
+                  <a href="https://css-tricks.com/restart-css-animation/">https://css-tricks.com/restart-css-animation/</a>
+                </p>
               </li>
               <li>
                 <h2>will-change</h2>
+                <p>
+                  <a href="https://css-tricks.com/almanac/properties/w/will-change/">https://css-tricks.com/almanac/properties/w/will-change/</a>
+                </p>
               </li>
             </ul>
           </div>
@@ -1020,6 +1031,150 @@ h.addEventListener('click', () => {
         <!-- .end .wrap -->
       </section>
 
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap size-50 aligncenter">
+          <h2>CSS "Callback Functions":</h2>
+          <br />
+          <div class="bg-white shadow">
+            <ul class="flexblock plans">
+              <li>
+                <h2>animationiteration</h2>
+              </li>
+              <li>
+                <h2>animationend</h2>
+              </li>
+              <li>
+                <h2>animationstart</h2>
+              </li>
+              <li>
+                <h2>transitionend</h2>
+              </li>
+            </ul>
+          </div>
+          <!-- .end .bg-white shadow -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
+            <div class="column">
+              <p data-height="500" data-theme-id="0" data-slug-hash="EQMXpN" data-default-tab="js,result" data-user="avcoder" data-embed-version="2"
+                data-pen-title="online exercise 6 - jQuery" data-preview="true" class="codepen">See the Pen
+                <a href="https://codepen.io/avcoder/pen/EQMXpN/">online exercise 6 - jQuery</a> by A.V. (
+                <a href="https://codepen.io/avcoder">@avcoder</a>) on
+                <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h2>
+                jQuery
+              </h2>
+
+              <p>Move the switch using 4 different ways: CSS only, nativeJS,
+                <strong>jQuery</strong>, Greensock</p>
+
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
+            <div class="column">
+              <p data-height="500" data-theme-id="0" data-slug-hash="xYQbjK" data-default-tab="css,result" data-user="avcoder" data-embed-version="2"
+                data-pen-title="js animation - using jQuery" data-preview="true" class="codepen">See the Pen
+                <a href="https://codepen.io/avcoder/pen/xYQbjK/">js animation - using jQuery</a> by A.V. (
+                <a href="https://codepen.io/avcoder">@avcoder</a>) on
+                <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h3>
+                Challenge - pacman move
+              </h3>
+              <p class="text-intro">
+                Use jQuery's css() and animate() to make pacman move right 200px upon click
+              </p>
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
+            <div class="column">
+              <p data-height="500" data-theme-id="0" data-slug-hash="vdPZzR" data-default-tab="css,result" data-user="avcoder" data-embed-version="2"
+                data-pen-title="online exercise 6 - greensock" data-preview="true" class="codepen">See the Pen
+                <a href="https://codepen.io/avcoder/pen/vdPZzR/">online exercise 6 - greensock</a> by A.V. (
+                <a href="https://codepen.io/avcoder">@avcoder</a>) on
+                <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h2>
+                Greensock
+              </h2>
+
+              <p>Move the switch using 4 different ways: CSS only, nativeJS, jQuery,
+                <strong>Greensock</strong>
+              </p>
+
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
+            <div class="column">
+              <p data-height="500" data-theme-id="0" data-slug-hash="EQMbBW" data-default-tab="css,result" data-user="avcoder" data-embed-version="2"
+                data-pen-title="js animation - using greensock" data-preview="true" class="codepen">See the Pen
+                <a href="https://codepen.io/avcoder/pen/EQMbBW/">js animation - using greensock</a> by A.V. (
+                <a href="https://codepen.io/avcoder">@avcoder</a>) on
+                <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h3>
+                Challenge - make pacman move
+              </h3>
+              <p class="text-intro">
+                Use Greensock to make pacman move right
+              </p>
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
 
       <section class="bg-apple aligncenter">
         <div class="wrap zoomIn">
@@ -1102,6 +1257,50 @@ h.addEventListener('click', () => {
         </div>
         <!-- .end .wrap -->
       </section>
+
+
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <h2 class="aligncenter">Web Animations API</h2>
+        <br/>
+        <div class="grid vertical-align">
+          <div class="bg-blue shadow column">
+            <h2>Pros</h2>
+            <ul class="flexblock activity">
+              <li>
+                <p class="text-intro">
+                  is native JavaScript that allows you to create more complex sequential animations without loading any external scripts.
+                </p>
+              </li>
+
+              <li>
+                <p class="text-intro">Sequencing is easy and super legible</p>
+              </li>
+              <li>
+                <p class="text-intro">Performance seems to be on track to being very good</p>
+              </li>
+            </ul>
+
+          </div>
+          <!-- .end .bg-white shadow -->
+          <div class="bg-purple shadow column">
+            <h2>Cons</h2>
+            <ul class="flexblock activity">
+              <li>
+                <p class="text-intro">Support is not great right now. It’s also still changing a bit so while the spec is moving... be cautious
+                  about running it in a production environment</p>
+              </li>
+              <li>
+                <p class="text-intro">There are still a lot of things about the timeline in GSAP (which we'll be covering in a moment) that are
+                  more powerful.</p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
 
       <section>
         <div class="wrap">
@@ -1190,44 +1389,15 @@ h.addEventListener('click', () => {
         </script>
       </section>
 
-
-
-
-      <section>
-        <!--.wrap = container (width: 90%) -->
-        <div class="wrap size-50 aligncenter">
-          <h2>CSS "Callback Functions":</h2>
-          <br />
-          <div class="bg-white shadow">
-            <ul class="flexblock plans">
-              <li>
-                <h2>animationiteration</h2>
-              </li>
-              <li>
-                <h2>animationend</h2>
-              </li>
-              <li>
-                <h2>animationstart</h2>
-              </li>
-              <li>
-                <h2>transitionend</h2>
-              </li>
-            </ul>
-          </div>
-          <!-- .end .bg-white shadow -->
-        </div>
-        <!-- .end .wrap -->
-      </section>
-
       <section>
         <!--.wrap = container (width: 90%) -->
         <div class="wrap">
           <div class="grid vertical-align">
 
             <div class="column">
-              <p data-height="500" data-theme-id="0" data-slug-hash="QQVXVM" data-default-tab="js,result" data-user="avcoder" data-embed-version="2"
-                data-pen-title="js animation - add class" class="codepen">See the Pen
-                <a href="https://codepen.io/avcoder/pen/QQVXVM/">js animation - add class</a> by A.V. (
+              <p data-height="500" data-theme-id="0" data-slug-hash="OQryWG" data-default-tab="js,result" data-user="avcoder" data-embed-version="2"
+                data-pen-title="web animation api beginner" data-preview="true" class="codepen">See the Pen
+                <a href="https://codepen.io/avcoder/pen/OQryWG/">web animation api beginner</a> by A.V. (
                 <a href="https://codepen.io/avcoder">@avcoder</a>) on
                 <a href="https://codepen.io">CodePen</a>.</p>
               <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -1235,7 +1405,7 @@ h.addEventListener('click', () => {
             <!-- .end .column -->
             <div class="column">
               <h2>
-                Challenge - use JS to add class
+                Web Animation Demo - hello world
               </h2>
 
             </div>
@@ -1246,33 +1416,6 @@ h.addEventListener('click', () => {
         <!-- .end .wrap -->
       </section>
 
-
-      <section>
-        <!--.wrap = container (width: 90%) -->
-        <div class="wrap">
-          <div class="grid vertical-align">
-
-            <div class="column">
-              <p data-height="500" data-theme-id="0" data-slug-hash="MQrRxX" data-default-tab="css,result" data-user="electerious" data-embed-version="2"
-                data-pen-title="Mouse movement button with border-radius" class="codepen">See the Pen
-                <a href="https://codepen.io/electerious/pen/MQrRxX/">Mouse movement button with border-radius</a> by Tobias Reich (
-                <a href="https://codepen.io/electerious">@electerious</a>) on
-                <a href="https://codepen.io">CodePen</a>.</p>
-              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-            </div>
-            <!-- .end .column -->
-            <div class="column">
-              <h2>
-                Challenge - use CSS variables and JS to make gradient hover button
-              </h2>
-
-            </div>
-            <!-- .end .column -->
-          </div>
-          <!-- .end .grid -->
-        </div>
-        <!-- .end .wrap -->
-      </section>
 
       <section>
         <!--.wrap = container (width: 90%) -->
@@ -1302,49 +1445,6 @@ h.addEventListener('click', () => {
       </section>
 
 
-      <section class="bg-apple">
-        <!--.wrap = container (width: 90%) -->
-        <h2 class="aligncenter">Web Animations API</h2>
-        <br/>
-        <div class="grid vertical-align">
-          <div class="bg-blue shadow column">
-            <h2>Pros</h2>
-            <ul class="flexblock activity">
-              <li>
-                <p class="text-intro">
-                  is native JavaScript that allows you to create more complex sequential animations without loading any external scripts.
-                </p>
-              </li>
-
-              <li>
-                <p class="text-intro">Sequencing is easy and super legible</p>
-              </li>
-              <li>
-                <p class="text-intro">Performance seems to be on track to being very good</p>
-              </li>
-            </ul>
-
-          </div>
-          <!-- .end .bg-white shadow -->
-          <div class="bg-purple shadow column">
-            <h2>Cons</h2>
-            <ul class="flexblock activity">
-              <li>
-                <p class="text-intro">Support is not great right now. It’s also still changing a bit so while the spec is moving... be cautious
-                  about running it in a production environment</p>
-              </li>
-              <li>
-                <p class="text-intro">There are still a lot of things about the timeline in GSAP (which we'll be covering in a moment) that are
-                  more powerful.</p>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-        <!-- .end .wrap -->
-      </section>
-
-
 
       <section>
         <!--.wrap = container (width: 90%) -->
@@ -1356,12 +1456,14 @@ h.addEventListener('click', () => {
           <div class="bg-white shadow">
             <ul class="flexblock reasons">
               <li>
-                You've gained some experience thinking through each part of an animated interactive widget or element using not much more
-                than a pencil and paper. You really don't need fancy software for this type of work.
+                While CSS is a great tool for building simple motion graphics sequences, it is difficult to build in user interface interaction
+                logic with just CSS. Sometimes a hybrid approach - leaving CSS to the things it does well, and using JavaScript
+                to control these effects is often the most practical and effective.
+
               </li>
-              <li>You've spent valuable time thinking through how the user will interact with the widget and how it might enhance
-                the user experience.</li>
-              <li>Often with motion graphics and user interfaces, less is more. Be subtle. </li>
+              <li>You've spent time learning javascript ways to animate, their differences over CSS animations, as well as a
+                brief intro to the new Web Animations API</li>
+              <li>Next up–JavaScript effects…</li>
             </ul>
           </div>
           <!-- .end .bg-white shadow -->
@@ -1382,7 +1484,7 @@ h.addEventListener('click', () => {
           </p>
 
           <p class="text-symbols">* * *</p>
-          <h4>More Animation Stuff</h4>
+          <h4>More Stuff</h4>
 
           <ul>
             <li>
