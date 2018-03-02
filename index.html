@@ -796,6 +796,41 @@ p.addEventListener('mouseover', () => {
 
       <section>
         <!--.wrap = container (width: 90%) -->
+        <div class="wrap size-50 aligncenter">
+          <h1 id="jsr">
+            JS Reminders
+          </h1>
+          <br />
+          <div class="bg-white shadow">
+            <ul class="flexblock activity">
+              <li>
+                <h2>How do we 'grab' a DOM node/element?</h2>
+                <p>Exercise: Try grabbing the
+                  <code>&lt;h1&gt;</code> element of this page using document.querySelector()</p>
+              </li>
+              <li>
+                <h2>How do we listen for clicks or other events?</h2>
+                <p>Exercise: Try adding a click event handler for the
+                  <code>&lt;h1&gt;</code> element so it alerts</p>
+              </li>
+              <li>
+                <h2>An object's properties can be accessed with the dot</h2>
+                <p>Create a simple object in the console and access one of its properties and reassign it a new value</p>
+              </li>
+              <li>
+                <h2>Explore
+                  <code>&lt;h1&gt;</code>.style properties</h2>
+                <p>Assign a new color. How come the CSS properties are all blank values? Use getComputedStyle() to get values</p>
+              </li>
+            </ul>
+          </div>
+          <!-- .end .bg-white shadow -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
         <div class="wrap">
           <div class="grid vertical-align">
 
@@ -810,11 +845,55 @@ p.addEventListener('mouseover', () => {
             <!-- .end .column -->
             <div class="column">
               <h2>
-                native JS only
+                native JS
               </h2>
-              <p>
-                <p>Move the switch using 4 different ways: CSS only,
-                  <strong>nativeJS</strong>, jQuery, Greensock</p>
+              <h4>setInterval() with .style</h3>
+                <p>
+                  <p>Move the switch using 4 different ways: CSS only,
+                    <strong>nativeJS</strong>, jQuery, Greensock</p>
+                </p>
+                <pre><code><strong>
+const h = document.querySelector('#element');
+h.addEventListener('click', () => {
+  let leftpx = 0;
+
+  const id = setInterval(() => {
+    leftpx += 12;
+    h.style.left = `${leftpx}px`;
+
+    if (leftpx > 200) { clearInterval(id); }
+  }, 16);
+});
+                </strong></code></pre>
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
+            <div class="column">
+              <p data-height="500" data-theme-id="0" data-slug-hash="gvdVKX" data-default-tab="html,result" data-user="avcoder" data-embed-version="2"
+                data-pen-title="js animation - use vanilla js only" data-preview="true" class="codepen">See the Pen
+                <a href="https://codepen.io/avcoder/pen/gvdVKX/">js animation - use vanilla js only</a> by A.V. (
+                <a href="https://codepen.io/avcoder">@avcoder</a>) on
+                <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h3>
+                Challenge - make mole move
+              </h3>
+              <p class="text-intro">
+                Use native JS via setInterval() to make mole move up when ground is clicked
               </p>
             </div>
             <!-- .end .column -->
@@ -823,6 +902,42 @@ p.addEventListener('mouseover', () => {
         </div>
         <!-- .end .wrap -->
       </section>
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
+            <div class="column">
+              <p data-height="500" data-theme-id="0" data-slug-hash="yvwXqL" data-default-tab="js,result" data-user="avcoder" data-embed-version="2"
+                data-pen-title="online exercise 6 - native js (setInterval way)" data-preview="true" class="codepen">See the Pen
+                <a href="https://codepen.io/avcoder/pen/yvwXqL/">online exercise 6 - native js (setInterval way)</a> by A.V. (
+                <a href="https://codepen.io/avcoder">@avcoder</a>) on
+                <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h2>
+                native JS
+              </h2>
+              <h4>add/remove classes</h3>
+                <p>
+                  <p>Move the switch using 4 different ways: CSS only,
+                    <strong>nativeJS</strong>, jQuery, Greensock</p>
+                </p>
+                <pre><code><strong>
+
+                </strong></code></pre>
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+
 
       <section class="bg-apple aligncenter">
         <div class="wrap zoomIn">
