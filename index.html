@@ -874,7 +874,7 @@ h.addEventListener('click', () => {
       </section>
 
 
-      <section>
+      <section class="bg-apple">
         <!--.wrap = container (width: 90%) -->
         <div class="wrap">
           <div class="grid vertical-align">
@@ -909,9 +909,9 @@ h.addEventListener('click', () => {
           <div class="grid vertical-align">
 
             <div class="column">
-              <p data-height="500" data-theme-id="0" data-slug-hash="yvwXqL" data-default-tab="js,result" data-user="avcoder" data-embed-version="2"
-                data-pen-title="online exercise 6 - native js (setInterval way)" data-preview="true" class="codepen">See the Pen
-                <a href="https://codepen.io/avcoder/pen/yvwXqL/">online exercise 6 - native js (setInterval way)</a> by A.V. (
+              <p data-height="500" data-theme-id="0" data-slug-hash="ZrPXvq" data-default-tab="css,result" data-user="avcoder" data-embed-version="2"
+                data-pen-title="online exercise 6 - native js (add/remove classes way)" data-preview="true" class="codepen">See the Pen
+                <a href="https://codepen.io/avcoder/pen/ZrPXvq/">online exercise 6 - native js (add/remove classes way)</a> by A.V. (
                 <a href="https://codepen.io/avcoder">@avcoder</a>) on
                 <a href="https://codepen.io">CodePen</a>.</p>
               <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -923,9 +923,11 @@ h.addEventListener('click', () => {
               </h2>
               <h4>add/remove classes</h3>
                 <p>
-                  <p>Move the switch using 4 different ways: CSS only,
-                    <strong>nativeJS</strong>, jQuery, Greensock</p>
+                  So instead of manually crafting the animation ourselves via setInterval, we could rely on what CSS does best, and simply
+                  add/remove classes that in turn is responsible for animation.
                 </p>
+                <p>Move the switch using 4 different ways: CSS only,
+                  <strong>nativeJS</strong>, jQuery, Greensock</p>
                 <pre><code><strong>
 
                 </strong></code></pre>
@@ -937,6 +939,86 @@ h.addEventListener('click', () => {
         <!-- .end .wrap -->
       </section>
 
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
+            <div class="column">
+              <p data-height="500" data-theme-id="0" data-slug-hash="QQVXVM" data-default-tab="css,result" data-user="avcoder" data-embed-version="2"
+                data-pen-title="js animation - add class" data-preview="true" class="codepen">See the Pen
+                <a href="https://codepen.io/avcoder/pen/QQVXVM/">js animation - add class</a> by A.V. (
+                <a href="https://codepen.io/avcoder">@avcoder</a>) on
+                <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h3>
+                Challenge - make mole move
+              </h3>
+              <p class="text-intro">
+                Use native JS via add/remove class to make mole move up when ground is clicked
+              </p>
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+
+            <div class="column">
+              <p data-height="500" data-theme-id="0" data-slug-hash="YedbPw" data-default-tab="css,result" data-user="avcoder" data-embed-version="2"
+                data-pen-title="attempt 5 - classList.toggle + click" class="codepen">See the Pen
+                <a href="https://codepen.io/avcoder/pen/YedbPw/">attempt 5 - classList.toggle + click</a> by A.V. (
+                <a href="https://codepen.io/avcoder">@avcoder</a>) on
+                <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <h3>
+                native JS via toggling class + click
+              </h3>
+              <p class="text-intro">My attempt#5 at Project 1 using native JS to toggle a class</p>
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section class="bg-purple ">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap size-50 aligncenter">
+          <h1 id="jsr">
+            Tips &amp; Tricks
+          </h1>
+          <br />
+          <div class="bg-white shadow">
+            <ul class="flexblock activity">
+              <li>
+                <h2>transitionend</h2>
+              </li>
+              <li>
+                <h2>Restarting animation via void element.offsetWidth</h2>
+              </li>
+              <li>
+                <h2>will-change</h2>
+              </li>
+            </ul>
+          </div>
+          <!-- .end .bg-white shadow -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
 
 
       <section class="bg-apple aligncenter">
@@ -1110,35 +1192,6 @@ h.addEventListener('click', () => {
 
 
 
-      <section>
-        <!--.wrap = container (width: 90%) -->
-        <div class="wrap">
-          <div class="grid vertical-align">
-
-            <div class="column">
-              <p data-height="500" data-theme-id="0" data-slug-hash="YedbPw" data-default-tab="css,result" data-user="avcoder" data-embed-version="2"
-                data-pen-title="attempt 5 - classList.toggle + click" class="codepen">See the Pen
-                <a href="https://codepen.io/avcoder/pen/YedbPw/">attempt 5 - classList.toggle + click</a> by A.V. (
-                <a href="https://codepen.io/avcoder">@avcoder</a>) on
-                <a href="https://codepen.io">CodePen</a>.</p>
-              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-            </div>
-            <!-- .end .column -->
-            <div class="column">
-              <h2>
-                Attempt 5 - use JS to add class
-              </h2>
-              <p>Try adding an event listener for 'transitionend' then do something</p>
-            </div>
-            <!-- .end .column -->
-          </div>
-          <!-- .end .grid -->
-        </div>
-        <!-- .end .wrap -->
-      </section>
-
-
-
 
       <section>
         <!--.wrap = container (width: 90%) -->
@@ -1248,32 +1301,6 @@ h.addEventListener('click', () => {
         <!-- .end .wrap -->
       </section>
 
-      <section>
-        <!--.wrap = container (width: 90%) -->
-        <div class="wrap">
-          <div class="grid vertical-align">
-
-            <div class="column">
-              <p data-height="500" data-theme-id="0" data-slug-hash="zRyVPZ" data-default-tab="css,result" data-user="avcoder" data-embed-version="2"
-                data-pen-title="wesbos' javascript30 - flex panel exercise" class="codepen">See the Pen
-                <a href="https://codepen.io/avcoder/pen/zRyVPZ/">wesbos' javascript30 - flex panel exercise</a> by A.V. (
-                <a href="https://codepen.io/avcoder">@avcoder</a>) on
-                <a href="https://codepen.io">CodePen</a>.</p>
-              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-            </div>
-            <!-- .end .column -->
-            <div class="column">
-              <h2>
-                Flex Panel Exercise
-              </h2>
-              <p>use JS to make panels expand on click</p>
-            </div>
-            <!-- .end .column -->
-          </div>
-          <!-- .end .grid -->
-        </div>
-        <!-- .end .wrap -->
-      </section>
 
       <section class="bg-apple">
         <!--.wrap = container (width: 90%) -->
